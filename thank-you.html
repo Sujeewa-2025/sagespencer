@@ -5,17 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Thank You — SAGE SPENCER</title>
 
-  <!-- Reuse your site CSS so the typography matches -->
-  <link rel="stylesheet" href="./index_files/sage-spencer.webflow.shared.72e3ed6fb.css" />
+  <!-- Cormorant Garamond (400, 700) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
+      /* Match your current site palette */
       --sage-bg: #fff7e8;     /* inner page */
       --sage-outer: #efefef;  /* outer background */
       --sage-divider: #EBE6E2;
 
       --sage-h1: #3C3534;
-      --sage-h2: #504947;
       --sage-brand: #726C6A;
       --sage-body: #6D6663;
       --sage-muted: #6f6a64;
@@ -27,7 +29,8 @@
       margin: 0;
       background: var(--sage-outer);
       color: var(--sage-body);
-      font-family: Garamond, serif;
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 400;
     }
 
     /* Centered 1000px “page” like your homepage */
@@ -37,69 +40,73 @@
       margin: 0 auto;
       background: var(--sage-bg);
       box-sizing: border-box;
-      padding: 48px 32px 56px;
+      padding: 56px 32px 64px;
       border-radius: 6px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.06);
       overflow: hidden;
+      text-align: center; /* Center ALL page content */
     }
 
-    .sage-top{
-      text-align: center;
-      margin-bottom: 22px;
-    }
-
+    /* Top brand */
     .sage-brand{
-      font-size: 14px;
+      font-size: 20px;          /* exact */
+      font-weight: 400;         /* exact */
+      line-height: 1.2;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--sage-brand);
       text-decoration: none;
       display: inline-block;
-      margin-bottom: 18px;
+      margin: 0 0 20px;
     }
 
+    /* Main title */
     .sage-title{
-      font-size: 42px;
+      font-size: 50px;          /* exact */
+      font-weight: 700;         /* exact */
       line-height: 1.1;
       color: var(--sage-h1);
-      margin: 0 0 10px;
-      font-weight: 600;
+      margin: 0 0 12px;
     }
 
     .sage-sub{
       margin: 0;
       color: var(--sage-muted);
-      font-size: 18px;
+      font-size: 20px;
+      font-weight: 400;
     }
 
     .sage-divider{
       height: 1px;
       background: var(--sage-divider);
-      margin: 26px auto 28px;
+      margin: 28px auto 30px;
       width: 100%;
-      max-width: 720px;
+      max-width: 760px;
     }
 
+    /* Body copy */
     .sage-copy{
-      max-width: 720px;
+      max-width: 760px;
       margin: 0 auto;
-      font-size: 18px;
-      line-height: 1.6;
+      font-size: 24px;          /* exact */
+      font-weight: 400;         /* exact */
+      line-height: 1.55;
+      color: var(--sage-body);
     }
 
     .sage-copy p{
-      margin: 0 0 14px;
+      margin: 0 0 18px;
     }
 
     .sage-sign{
       margin-top: 18px;
-      font-size: 18px;
-      color: var(--sage-h2);
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--sage-h1);
     }
 
     .sage-actions{
-      margin-top: 28px;
-      text-align: center;
+      margin-top: 30px;
     }
 
     .sage-btn{
@@ -109,7 +116,8 @@
       color: #fff;
       text-decoration: none;
       border-radius: 2px;
-      font-size: 18px;
+      font-size: 22px;
+      font-weight: 400;
     }
 
     .sage-btn:hover{
@@ -117,9 +125,10 @@
     }
 
     @media (max-width: 767px){
-      .sage-page{ padding: 34px 18px 44px; border-radius: 0; }
-      .sage-title{ font-size: 32px; }
-      .sage-copy{ font-size: 17px; }
+      .sage-page{
+        padding: 44px 18px 52px;
+        border-radius: 0;
+      }
     }
 
     /* Always hide any Webflow badge if injected */
@@ -135,11 +144,9 @@
 
 <body>
   <main class="sage-page">
-    <div class="sage-top">
-      <a class="sage-brand" href="/">SAGE SPENCER</a>
-      <h1 class="sage-title">Stay with Sage.</h1>
-      <p class="sage-sub">You’re in. Take a breath.</p>
-    </div>
+    <a class="sage-brand" href="/">SAGE SPENCER</a>
+    <h1 class="sage-title">Stay with Sage.</h1>
+    <p class="sage-sub">You’re in. Take a breath.</p>
 
     <div class="sage-divider"></div>
 
