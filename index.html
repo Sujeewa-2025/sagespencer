@@ -510,7 +510,6 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
   }
 </style>
 
-
 <style id="sage-color-fix">
   /* SAGE SPENCER palette overrides (keeps existing layout & Webflow structure) */
   :root{
@@ -519,10 +518,15 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
     --sage-h1: #3C3534;
     --sage-h2: #504947;
     --sage-brand: #726C6A;
+
+    /* Body / readable greys */
     --sage-body: #6D6663;
     --sage-body-2: #605A56;
-    --sage-muted: #C9C3C0;
+
+    /* Muted greys (slightly darker for readability on real devices) */
+    --sage-muted: #B7B1AE;   /* was #C9C3C0 (too faint on some screens) */
     --sage-helper: #726C69;
+
     --sage-button: #5E7A61;
     --sage-button-hover: #5A775F;
     --sage-input-border: #E9E6E1;
@@ -582,6 +586,22 @@ body[unresolved] {opacity: 0; display: block; overflow: hidden; position: relati
   }
   .submit-button-2:hover{
     background-color: var(--sage-button-hover) !important;
+  }
+
+  /* Mobile readability boost (slightly darker text on small screens) */
+  @media (max-width: 767px){
+    :root{
+      --sage-body: #625B58;
+      --sage-body-2: #5E5754;
+      --sage-muted: #AFA9A6;
+    }
+    .hero-subheading{ color: var(--sage-muted) !important; }
+    .text-block-4,
+    .text-block-12,
+    .text-block-14,
+    .list-item, .list-item-2, .list-item-3, .list-item-4, .list-item-5{
+      color: var(--sage-body) !important;
+    }
   }
 </style>
 
