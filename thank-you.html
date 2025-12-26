@@ -12,7 +12,6 @@
       --muted:#8b8582;
       --line:#efeae6;
       --sage:#5c735e;
-      --card:#ffffff;
     }
     *{box-sizing:border-box}
     body{
@@ -53,7 +52,7 @@
       margin:0 auto 14px;
       font-size:clamp(16px, 1.7vw, 20px);
       line-height:1.9;
-      max-width:52ch;
+      max-width:56ch;
     }
     .divider{
       height:1px;
@@ -63,7 +62,7 @@
     }
     .note{
       margin:0 auto;
-      max-width:56ch;
+      max-width:60ch;
       font-size:clamp(16px, 1.7vw, 20px);
       line-height:1.95;
     }
@@ -79,30 +78,13 @@
       white-space:nowrap;
     }
     .sig{
-      margin-top:24px;
-      display:flex;
-      justify-content:flex-end;
-      align-items:center;
-      gap:10px;
+      margin-top:22px;
       color:var(--text);
       font-size:18px;
-      letter-spacing:2px;
-    }
-    .sig small{
-      letter-spacing:0;
-      color:var(--muted);
-      font-size:14px;
-      margin-right:6px;
-    }
-    .sprig{
-      width:26px;
-      height:26px;
-      flex:0 0 auto;
-      opacity:.9;
+      letter-spacing:1px;
     }
     @media (max-width:520px){
       .card{ padding:28px 18px 26px; }
-      .sig{ justify-content:center; }
       .p, .note{ max-width:unset; }
     }
   </style>
@@ -115,31 +97,23 @@
       <h1>You’re in. Your first note is on its way.</h1>
 
       <p class="p">
-        Sometimes my emails land in Promotions/Spam (because they’re not “marketing”).
-        Please check there too.
+        Sometimes it lands in Promotions/Spam (because it’s not marketing). Please check there too.
       </p>
 
       <div class="divider" role="presentation"></div>
 
       <p class="note">
         One important thing: my form gets hit by bots.<br><br>
-        So when you receive my email, reply with just:
-        <span class="pill">“Hi Sage”</span> — that’s it.
-        <br><br>
-        I read every reply.<br>
-        And once you do, I’ll move you into my personal list so you receive my messages consistently:
-        no promos, no noise, ever.
+        So when you receive my email, reply with just
+        <span class="pill">“Hi Sage”</span> — that’s it.<br><br>
+
+        Then I know you’re not a bot.<br><br>
+
+        Once I see your reply (I read every one), I’ll move you into my personal list so you receive my messages
+        consistently — no promos, no noise, ever.
       </p>
 
-      <div class="sig" aria-label="Signature">
-        <small>🌿</small>
-        <span>— SAGE</span>
-        <svg class="sprig" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M42 14c-10 1-17 9-18 19 10 1 18-7 18-19Z" fill="#5c735e"/>
-          <path d="M22 26c-8 2-13 9-12 18 9 1 15-6 12-18Z" fill="#5c735e" opacity=".85"/>
-          <path d="M18 48c9-12 17-19 30-26" stroke="#5c735e" stroke-width="3" stroke-linecap="round" fill="none"/>
-        </svg>
-      </div>
+      <div class="sig">🌿 — SAGE</div>
     </section>
   </main>
 </body>
