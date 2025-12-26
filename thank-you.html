@@ -1,194 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thank You — SAGE SPENCER</title>
-
-  <!-- Cormorant Garamond (400, 700) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
-
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>Thank you — Sage Spencer</title>
   <style>
     :root{
-      /* Match your current site palette */
-      --sage-bg: #fff7e8;     /* inner page */
-      --sage-outer: #efefef;  /* outer background */
-      --sage-divider: #EBE6E2;
-
-      --sage-h1: #3C3534;
-      --sage-brand: #726C6A;
-      --sage-body: #6D6663;
-      --sage-muted: #6f6a64;
-      --sage-button: #5E7A61;
-      --sage-button-hover: #5A775F;
+      --bg:#fcf8f4;
+      --text:#585150;
+      --muted:#8b8582;
+      --line:#efeae6;
+      --sage:#5c735e;
+      --card:#ffffff;
     }
-
+    *{box-sizing:border-box}
     body{
-      margin: 0;
-      background: var(--sage-outer);
-      color: var(--sage-body);
-      font-family: "Cormorant Garamond", serif;
-      font-weight: 400;
+      margin:0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:var(--bg);
+      color:var(--muted);
     }
-
-    /* Centered 1000px “page” like your homepage */
-    .sage-page{
-      width: 100%;
-      max-width: 1000px;
-      margin: 0 auto;
-      background: var(--sage-bg);
-      box-sizing: border-box;
-      padding: 56px 32px 64px;
-      border-radius: 6px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-      overflow: hidden;
-      text-align: center; /* Center ALL page content */
+    .wrap{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 16px;
     }
-
-    /* Top brand */
-    .sage-brand{
-      font-size: 20px;          /* exact */
-      font-weight: 400;         /* exact */
-      line-height: 1.2;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--sage-brand);
-      text-decoration: none;
-      display: inline-block;
-      margin: 0 0 20px;
+    .card{
+      width:min(820px, 100%);
+      text-align:center;
+      padding:34px 28px 30px;
+      border-radius:18px;
+      background:transparent;
     }
-
-    /* Main title */
-    .sage-title{
-      font-size: 50px;          /* exact */
-      font-weight: 700;         /* exact */
-      line-height: 1.1;
-      color: var(--sage-h1);
-      margin: 0 0 12px;
+    .brand{
+      font-size:12px;
+      letter-spacing:4px;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:22px;
     }
-
-    .sage-sub{
-      margin: 0;
-      color: var(--sage-muted);
-      font-size: 20px;
-      font-weight: 400;
+    h1{
+      margin:0 0 18px;
+      font-weight:400;
+      font-size:clamp(30px, 4vw, 46px);
+      line-height:1.15;
+      color:var(--text);
     }
-
-    .sage-divider{
-      height: 1px;
-      background: var(--sage-divider);
-      margin: 28px auto 30px;
-      width: 100%;
-      max-width: 760px;
+    .p{
+      margin:0 auto 14px;
+      font-size:clamp(16px, 1.7vw, 20px);
+      line-height:1.9;
+      max-width:52ch;
     }
-
-    /* Body copy */
-    .sage-copy{
-      max-width: 760px;
-      margin: 0 auto;
-      font-size: 24px;          /* exact */
-      font-weight: 400;         /* exact */
-      line-height: 1.55;
-      color: var(--sage-body);
+    .divider{
+      height:1px;
+      background:var(--line);
+      margin:26px auto;
+      width:min(640px, 100%);
     }
-
-    .sage-copy p{
-      margin: 0 0 18px;
+    .note{
+      margin:0 auto;
+      max-width:56ch;
+      font-size:clamp(16px, 1.7vw, 20px);
+      line-height:1.95;
     }
-
-    .sage-sign{
-      margin-top: 18px;
-      font-size: 24px;
-      font-weight: 400;
-      color: var(--sage-h1);
+    .pill{
+      display:inline-block;
+      background:rgba(92,115,94,0.10);
+      border:1px solid rgba(92,115,94,0.18);
+      color:var(--text);
+      padding:6px 12px;
+      border-radius:999px;
+      font-style:italic;
+      margin:10px 0 0;
+      white-space:nowrap;
     }
-
-    .sage-actions{
-      margin-top: 30px;
+    .sig{
+      margin-top:24px;
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+      gap:10px;
+      color:var(--text);
+      font-size:18px;
+      letter-spacing:2px;
     }
-
-    .sage-btn{
-      display: inline-block;
-      padding: 12px 18px;
-      background: var(--sage-button);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 2px;
-      font-size: 22px;
-      font-weight: 400;
+    .sig small{
+      letter-spacing:0;
+      color:var(--muted);
+      font-size:14px;
+      margin-right:6px;
     }
-
-    .sage-btn:hover{
-      background: var(--sage-button-hover);
+    .sprig{
+      width:26px;
+      height:26px;
+      flex:0 0 auto;
+      opacity:.9;
     }
-
-    @media (max-width: 767px){
-      .sage-page{
-        padding: 44px 18px 52px;
-        border-radius: 0;
-      }
-    }
-
-    /* Always hide any Webflow badge if injected */
-    .w-webflow-badge,
-    .w-webflow-badge *{
-      display:none !important;
-      visibility:hidden !important;
-      opacity:0 !important;
-      pointer-events:none !important;
+    @media (max-width:520px){
+      .card{ padding:28px 18px 26px; }
+      .sig{ justify-content:center; }
+      .p, .note{ max-width:unset; }
     }
   </style>
 </head>
-
 <body>
-  <main class="sage-page">
-    <a class="sage-brand" href="/">SAGE SPENCER</a>
-    <h1 class="sage-title">Stay with Sage.</h1>
-    <p class="sage-sub">You’re in. Take a breath.</p>
+  <main class="wrap">
+    <section class="card" aria-label="Thank you message">
+      <div class="brand">SAGE SPENCER</div>
 
-    <div class="sage-divider"></div>
+      <h1>You’re in. Your first note is on its way.</h1>
 
-    <div class="sage-copy">
-      <p><strong>You just did something most men rarely do.</strong><br>
-      You let yourself be reached.</p>
+      <p class="p">
+        Sometimes my emails land in Promotions/Spam (because they’re not “marketing”).
+        Please check there too.
+      </p>
 
-      <p>That’s not small.<br>
-      That’s not “just an opt-in.”<br>
-      That’s you admitting—quietly—<br>
-      <em>I don’t have to do everything alone.</em></p>
+      <div class="divider" role="presentation"></div>
 
-      <p>Because even strong men get tired.<br>
-      Not always from work…<br>
-      but from carrying too much in silence.<br>
-      From holding it together for everyone.<br>
-      From trying to stay solid when life keeps pressing.</p>
+      <p class="note">
+        One important thing: my form gets hit by bots.<br><br>
+        So when you receive my email, reply with just:
+        <span class="pill">“Hi Sage”</span> — that’s it.
+        <br><br>
+        I read every reply.<br>
+        And once you do, I’ll move you into my personal list so you receive my messages consistently:
+        no promos, no noise, ever.
+      </p>
 
-      <p>In a few moments, you’ll receive your first message from me.<br>
-      Not a newsletter.<br>
-      Not a pitch.<br>
-      Just a reminder—<br>
-      steady, warm, and real.</p>
-
-      <p>That you can rebuild your strength without hardening.<br>
-      That you can move forward without pretending.<br>
-      That your future doesn’t need you to fight alone.</p>
-
-      <p>Hold still for a second.<br>
-      Drop your shoulders.<br>
-      Unclench your jaw.</p>
-
-      <p><strong>You’re not late.</strong><br>
-      <strong>You’re not broken.</strong><br>
-      <strong>You’re here.</strong></p>
-
-      <p class="sage-sign">🌿 — SAGE</p>
-    </div>
-
-    <div class="sage-actions">
-      <a class="sage-btn" href="/">Return to the main page</a>
-    </div>
+      <div class="sig" aria-label="Signature">
+        <small>🌿</small>
+        <span>— SAGE</span>
+        <svg class="sprig" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M42 14c-10 1-17 9-18 19 10 1 18-7 18-19Z" fill="#5c735e"/>
+          <path d="M22 26c-8 2-13 9-12 18 9 1 15-6 12-18Z" fill="#5c735e" opacity=".85"/>
+          <path d="M18 48c9-12 17-19 30-26" stroke="#5c735e" stroke-width="3" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+    </section>
   </main>
 </body>
 </html>
