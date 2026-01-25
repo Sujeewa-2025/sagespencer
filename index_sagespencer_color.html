@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SAGE SPENCER — Me & You (21 Days)</title>
+  <meta name="description" content="Let’s build your dream life together. A 21-day email journey with SAGE—daily story, LOA mindset shift, and one small action." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      /* Your palette */
+      --y1:#fcc12b;
+      --o:#fc6d06;
+      --p:#c119fd;
+      --b:#2b2ae1;
+      --y2:#fcc92c;
+
+      /* Base */
+      --ink:#0f1024;
+      --muted: rgba(15,16,36,.72);
+      --card: rgba(255,255,255,.72);
+      --line: rgba(15,16,36,.12);
+      --radius: 18px;
+      --w: 880px;
+
+      --shadow: 0 22px 60px rgba(15,16,36,.12);
+      --shadow-soft: 0 14px 36px rgba(15,16,36,.10);
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+
+      background:
+        radial-gradient(900px 560px at 18% 8%, rgba(252, 193, 43, .30), rgba(252, 193, 43, 0)),
+        radial-gradient(820px 520px at 88% 12%, rgba(193, 25, 253, .22), rgba(193, 25, 253, 0)),
+        radial-gradient(820px 520px at 78% 86%, rgba(43, 42, 225, .18), rgba(43, 42, 225, 0)),
+        radial-gradient(900px 560px at 18% 92%, rgba(252, 109, 6, .14), rgba(252, 109, 6, 0)),
+        linear-gradient(180deg, rgba(255,255,255,.92), rgba(255,255,255,.78));
+    }
+
+    .wrap{
+      max-width: var(--w);
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    .brand{
+      text-align:center;
+      padding-top: 46px;
+      letter-spacing: .24em;
+      font-size: 12px;
+      color: rgba(15,16,36,.62);
+      text-transform: uppercase;
+    }
+    .brand:after{
+      content:"";
+      display:block;
+      width: 86px;
+      height: 3px;
+      margin: 14px auto 0;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--y1), var(--o), var(--p), var(--b), var(--y2));
+      opacity: .85;
+    }
+
+    h1, h2, h3{
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      margin: 0;
+      letter-spacing: .01em;
+    }
+
+    .hero{
+      text-align:center;
+      padding: 32px 0 14px;
+    }
+
+    h1{
+      font-size: clamp(46px, 6vw, 70px);
+      line-height: 1.04;
+      margin-bottom: 12px;
+    }
+
+    .sub{
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-size: 19px;
+      color: rgba(15,16,36,.74);
+      max-width: 66ch;
+      margin: 0 auto 22px;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap: 10px;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(15,16,36,.70);
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.62);
+      border: 1px solid rgba(15,16,36,.10);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(8px);
+      margin-bottom: 14px;
+    }
+    .dot{
+      width:10px; height:10px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--p), var(--b));
+      box-shadow: 0 0 0 4px rgba(193,25,253,.12);
+    }
+
+    .card{
+      margin: 0 auto;
+      max-width: 660px;
+      background: var(--card);
+      border: 1px solid rgba(15,16,36,.10);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .helper{
+      margin: 6px 0 10px;
+      font-size: 14px;
+      color: rgba(15,16,36,.70);
+      text-align: center;
+    }
+
+    .row{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .field{
+      flex: 1 1 240px;
+      text-align:left;
+      display:flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    label{
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: rgba(15,16,36,.62);
+    }
+
+    input{
+      width:100%;
+      border-radius: 14px;
+      border: 1px solid rgba(15,16,36,.16);
+      padding: 13px 14px;
+      background: rgba(255,255,255,.84);
+      color: var(--ink);
+      outline: none;
+      font-size: 15px;
+      transition: box-shadow .15s ease, border-color .15s ease, transform .05s ease;
+    }
+
+    input:focus{
+      border-color: rgba(43,42,225,.50);
+      box-shadow: 0 0 0 5px rgba(43,42,225,.14), 0 0 0 10px rgba(193,25,253,.08);
+      background: rgba(255,255,255,.94);
+    }
+
+    .cta{
+      margin-top: 12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    button{
+      width: min(100%, 420px);
+      border: 0;
+      border-radius: 14px;
+      padding: 13px 16px;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: .01em;
+      cursor: pointer;
+      background: linear-gradient(90deg, var(--b), var(--p));
+      box-shadow: 0 18px 40px rgba(43,42,225,.22), 0 12px 30px rgba(193,25,253,.18);
+      transition: transform .08s ease, filter .15s ease, box-shadow .15s ease;
+    }
+    button:hover{
+      filter: brightness(1.03);
+      box-shadow: 0 20px 48px rgba(43,42,225,.26), 0 14px 34px rgba(193,25,253,.22);
+    }
+    button:active{ transform: translateY(1px); }
+
+    .micro{
+      margin: 10px 0 0;
+      text-align:center;
+      font-size: 13px;
+      color: rgba(15,16,36,.66);
+    }
+    .micro strong{
+      font-weight: 600;
+      background: linear-gradient(90deg, var(--o), var(--y2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .divider{
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(15,16,36,0), var(--line), rgba(15,16,36,0));
+      margin: 44px 0;
+      position: relative;
+    }
+    .divider:after{
+      content:"";
+      display:block;
+      width: 96px;
+      height: 4px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--y1), var(--o), var(--p), var(--b), var(--y2));
+      margin: -2px auto 0;
+      opacity: .75;
+    }
+
+    section{
+      text-align:center;
+      padding-bottom: 10px;
+    }
+
+    h2{
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.12;
+      margin-bottom: 12px;
+    }
+
+    h3{
+      font-size: 22px;
+      margin: 18px 0 8px;
+      color: rgba(15,16,36,.92);
+    }
+
+    .copy{
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-size: 19px;
+      color: rgba(15,16,36,.84);
+      margin: 0 auto;
+      max-width: 68ch;
+    }
+    .copy p{ margin: 0 0 14px; }
+
+    .bullets{
+      list-style: none;
+      padding: 0;
+      margin: 14px auto 0;
+      max-width: 700px;
+      text-align: left;
+      color: rgba(15,16,36,.86);
+    }
+    .bullets li{
+      margin: 10px 0;
+      padding-left: 18px;
+      position: relative;
+      font-size: 16px;
+    }
+    .bullets li:before{
+      content:"";
+      width: 10px; height:10px;
+      border-radius: 999px;
+      position:absolute;
+      left:0; top: 7px;
+      background: linear-gradient(180deg, var(--o), var(--y2));
+      box-shadow: 0 0 0 4px rgba(252,109,6,.10);
+    }
+
+    .map{
+      max-width: 760px;
+      margin: 0 auto;
+      text-align:left;
+      background: rgba(255,255,255,.50);
+      border: 1px solid rgba(15,16,36,.10);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(10px);
+    }
+    .map p{ margin: 8px 0; color: rgba(15,16,36,.86); }
+
+    .faq{
+      max-width: 760px;
+      margin: 0 auto;
+      text-align:left;
+    }
+    .faq details{
+      border: 1px solid rgba(15,16,36,.12);
+      background: rgba(255,255,255,.55);
+      border-radius: 16px;
+      padding: 12px 14px;
+      margin: 10px 0;
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(10px);
+    }
+    .faq summary{
+      cursor:pointer;
+      font-weight: 600;
+      color: rgba(15,16,36,.92);
+      list-style: none;
+    }
+    .faq summary::-webkit-details-marker{ display:none; }
+    .faq p{ margin: 10px 0 0; color: rgba(15,16,36,.82); }
+
+    .note{
+      font-size: 13px;
+      color: rgba(15,16,36,.58);
+      margin-top: 14px;
+    }
+
+    footer{
+      text-align:center;
+      padding: 36px 0 56px;
+      color: rgba(15,16,36,.62);
+    }
+    .tagline{
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-top: 8px;
+      opacity: .88;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="brand">SAGE SPENCER</div>
+
+    <header class="hero" id="top">
+      <div class="pill"><span class="dot"></span> Me &amp; You — 21 Days</div>
+      <h1>Let’s build your dream life together.</h1>
+      <p class="sub">
+        <strong>Me &amp; You — a 21-day email journey with SAGE.</strong><br>
+        Every day you’ll get a short story, a gentle mindset shift (Law of Attraction), and one small real-life step—
+        so you feel calmer, clearer, and more in control of your life… including your money.
+      </p>
+
+      <div class="card" id="join">
+        <p class="helper">Enter your name and email, and I’ll send you <strong>Day 1</strong> today.</p>
+
+        <form id="signup-form" method="post" action="#">
+          <div class="row">
+            <div class="field">
+              <label for="firstName">First name</label>
+              <input id="firstName" name="firstName" type="text" autocomplete="given-name" placeholder="Enter your name…" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="Enter your email…" required>
+            </div>
+          </div>
+
+          <div class="cta">
+            <button type="submit">Start Day 1 With Me</button>
+          </div>
+
+          <p class="micro">No spam. Unsubscribe anytime. <strong>I’ll keep it respectful.</strong></p>
+        </form>
+      </div>
+    </header>
+
+    <hr class="divider" />
+
+    <section aria-label="What you're joining">
+      <h2>What you’re joining</h2>
+      <div class="copy">
+        <p>This isn’t a “get motivated” newsletter.</p>
+        <p>This is a calm, daily relationship with your growth—where you feel held and you move forward.</p>
+        <p>Some days you’ll feel strong. Some days you won’t.<br>
+        Either way… I’m here. We keep going—quietly, consistently.</p>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section aria-label="Every day you will receive">
+      <h2>Every day, you’ll receive</h2>
+      <ul class="bullets">
+        <li>A short story that makes you feel seen</li>
+        <li>One mindset shift (LOA / alignment) that resets your inner world</li>
+        <li>One small step (5–10 minutes) that creates real progress</li>
+        <li>One question you can reply to—so it feels like we’re doing this together</li>
+      </ul>
+      <p class="note">This is for the man who wants change—without pressure and without pretending.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <section aria-label="This is for you if">
+      <h2>This is for you if…</h2>
+      <ul class="bullets">
+        <li>You’re tired of starting over in silence</li>
+        <li>You want your life to feel clearer, calmer, and more guided</li>
+        <li>You believe in manifestation—but you also want real actions</li>
+        <li>You want better habits, stronger confidence, and steadier money decisions—without harshness</li>
+      </ul>
+      <p class="note">You don’t have to be perfect. You just have to show up.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <section aria-label="Me and You 21 Day Journey">
+      <h2>Me &amp; You — The 21-Day Journey</h2>
+      <div class="map">
+        <h3>Week 1 — Alignment (reset your inner world gently)</h3>
+        <p><strong>Day 1:</strong> Your “Setpoint” (why you return to stuck) + one tiny step</p>
+        <p><strong>Day 2:</strong> Desire vs desperation (calm wanting attracts better choices)</p>
+        <p><strong>Day 3:</strong> Identity shift (“I’m becoming the kind of man who…”)</p>
+        <p><strong>Day 4:</strong> Self-respect (boundaries and standards with peace)</p>
+        <p><strong>Day 5:</strong> Emotional triggers (what pulls you off track—and how to soften it)</p>
+        <p><strong>Day 6:</strong> Receiving energy (allowing support, opportunity, better outcomes)</p>
+        <p><strong>Day 7:</strong> Weekly reset ritual (gratitude + plan + gentle structure)</p>
+
+        <h3>Week 2 — Real-Life Rhythm (simple systems that feel light)</h3>
+        <p><strong>Day 8:</strong> The 2-minute daily check-in (calm, consistent)</p>
+        <p><strong>Day 9:</strong> The 1% better rule (tiny upgrades that compound)</p>
+        <p><strong>Day 10:</strong> The kind plan (a life plan that doesn’t punish you)</p>
+        <p><strong>Day 11:</strong> The pause rule (stop spirals before they cost you)</p>
+        <p><strong>Day 12:</strong> Clean up leaks (time, money, energy drains)</p>
+        <p><strong>Day 13:</strong> Create value (skills → one path → one action)</p>
+        <p><strong>Day 14:</strong> Confidence day (proof you’re changing)</p>
+
+        <h3>Week 3 — Expansion (raise standards, grow capacity, keep it)</h3>
+        <p><strong>Day 15:</strong> Higher standards (what you tolerate shapes your life)</p>
+        <p><strong>Day 16:</strong> Calm confidence (how steady men decide)</p>
+        <p><strong>Day 17:</strong> Ask bigger (opportunities, conversations, courage)</p>
+        <p><strong>Day 18:</strong> Offer mindset (what you give that life rewards)</p>
+        <p><strong>Day 19:</strong> Pressure to peace (staying steady when life feels heavy)</p>
+        <p><strong>Day 20:</strong> Your 90-day next chapter (simple roadmap)</p>
+        <p><strong>Day 21:</strong> Graduation (lock the rhythm + your next 30 days)</p>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section aria-label="Manifestation without the fantasy">
+      <h2>Manifestation—without the fantasy</h2>
+      <div class="copy">
+        <p>Law of Attraction works best when your inner world matches your daily choices.</p>
+        <p>So we do both:</p>
+      </div>
+      <ul class="bullets" style="max-width:520px;">
+        <li><strong>Alignment</strong> (thoughts, self-talk, emotional setpoint)</li>
+        <li><strong>Action</strong> (small steps that create proof)</li>
+      </ul>
+      <p class="note">That’s how your life starts changing—in a way you can actually feel.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <section aria-label="FAQ">
+      <h2>FAQ</h2>
+      <div class="faq">
+        <details>
+          <summary>Is this free?</summary>
+          <p>Yes. Join the list and you’ll receive Day 1 instantly.</p>
+        </details>
+        <details>
+          <summary>How long are the emails?</summary>
+          <p>3–5 minutes. Calm, clear, and practical.</p>
+        </details>
+        <details>
+          <summary>Is this only about money?</summary>
+          <p>No. It’s about your dream life—confidence, direction, stability. Money is one pillar.</p>
+        </details>
+        <details>
+          <summary>What if I miss a day?</summary>
+          <p>No shame. Come back. We continue.</p>
+        </details>
+        <details>
+          <summary>Can I unsubscribe?</summary>
+          <p>Anytime. One click.</p>
+        </details>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section aria-label="Final call to action">
+      <h2>Start Day 1 with me today.</h2>
+      <p class="sub" style="margin-bottom:18px;">You don’t have to go alone. We build this—together.</p>
+
+      <div class="card">
+        <p class="helper">Enter your name and email, and I’ll send you <strong>Day 1</strong> today.</p>
+
+        <form id="signup-form-2" method="post" action="#">
+          <div class="row">
+            <div class="field">
+              <label for="firstName2">First name</label>
+              <input id="firstName2" name="firstName" type="text" autocomplete="given-name" placeholder="Enter your name…" required>
+            </div>
+            <div class="field">
+              <label for="email2">Email</label>
+              <input id="email2" name="email" type="email" autocomplete="email" placeholder="Enter your email…" required>
+            </div>
+          </div>
+
+          <div class="cta">
+            <button type="submit">Start Day 1 With Me</button>
+          </div>
+
+          <p class="micro">No spam. Unsubscribe anytime.</p>
+        </form>
+      </div>
+
+      <p class="note">Form is currently a layout placeholder. Next step: connect your email tool + thank-you page.</p>
+    </section>
+
+    <footer>
+      <div class="brand" style="padding-top:0;">SAGE SPENCER</div>
+      <div class="tagline">Whispering strength into your days.</div>
+      <div class="note">© <span id="year"></span> SageSpencer.com</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
