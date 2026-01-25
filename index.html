@@ -3,193 +3,369 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sage Spencer — Financial Freedom Series</title>
-  <meta name="description" content="Financial freedom starts today. Join the email series for daily steps: manifestation + action, aligned execution, quiet consistency." />
+  <title>SAGE SPENCER — Financial Freedom Series</title>
+  <meta name="description" content="Financial freedom starts today. Join the email series for real steps: alignment + execution, quietly and consistently." />
 
-  <!-- Optional: social preview -->
-  <meta property="og:title" content="Financial Freedom Starts Today — Sage Spencer" />
-  <meta property="og:description" content="Join the Financial Freedom email series: small steps, every day. Alignment + execution." />
-  <meta property="og:type" content="website" />
+  <!-- Fonts (optional). If blocked, fall back gracefully. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* Minimal premium base — we can refine later */
-    :root { --max: 980px; --pad: 20px; }
-    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.5; }
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
-    header, section, footer { padding: 56px 0; }
-    h1 { font-size: clamp(32px, 5vw, 52px); line-height:1.1; margin: 0 0 14px; }
-    h2 { font-size: clamp(22px, 3vw, 30px); margin: 0 0 12px; }
-    p { margin: 0 0 14px; }
-    .hero { padding-top: 72px; padding-bottom: 72px; }
-    .grid { display:grid; gap: 18px; }
-    @media(min-width: 860px){ .grid-2 { grid-template-columns: 1.15fr 0.85fr; align-items:start; } }
-    .card { border: 1px solid #e6e6e6; border-radius: 16px; padding: 18px; }
-    .small { font-size: 14px; opacity: .8; }
-    .btn { display:inline-block; padding: 12px 16px; border-radius: 12px; border:1px solid #111; text-decoration:none; color:#111; }
-    .list { margin: 10px 0 0; padding-left: 18px; }
-    .divider { border-top: 1px solid #eee; }
-    .note { white-space: pre-line; }
-    nav a { margin-right: 14px; text-decoration:none; color:#111; opacity:.85; }
-    nav a:hover { opacity:1; text-decoration: underline; }
+    :root{
+      --bg: #F6F1EA;
+      --ink: #2B2A28;
+      --muted: rgba(43,42,40,.72);
+      --line: rgba(43,42,40,.12);
+      --card: rgba(255,255,255,.58);
+      --sage: #3E5F51;
+      --sage-dark: #2E4B40;
+      --radius: 16px;
+      --w: 760px;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin: 0;
+      background: radial-gradient(1200px 600px at 50% 0%, rgba(255,255,255,.75), rgba(255,255,255,0)) , var(--bg);
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .wrap{
+      max-width: var(--w);
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+
+    .brand{
+      text-align: center;
+      padding-top: 42px;
+      letter-spacing: .22em;
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .hero{
+      text-align: center;
+      padding: 34px 0 12px;
+    }
+
+    h1, h2{
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-weight: 500;
+      margin: 0;
+      letter-spacing: .01em;
+    }
+
+    h1{
+      font-size: clamp(44px, 6vw, 64px);
+      line-height: 1.05;
+      margin-bottom: 12px;
+    }
+
+    .sub{
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0 auto 26px;
+      max-width: 48ch;
+    }
+
+    .card{
+      margin: 0 auto;
+      max-width: 560px;
+      background: var(--card);
+      border: 1px solid rgba(43,42,40,.08);
+      border-radius: var(--radius);
+      padding: 18px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.06);
+    }
+
+    form{ margin: 0; }
+    .row{ display:flex; gap: 10px; flex-wrap: wrap; }
+
+    .field{
+      flex: 1 1 200px;
+      display:flex;
+      flex-direction: column;
+      gap: 6px;
+      text-align: left;
+    }
+
+    label{
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    input{
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(43,42,40,.14);
+      padding: 12px 14px;
+      background: rgba(255,255,255,.78);
+      color: var(--ink);
+      outline: none;
+      font-size: 15px;
+    }
+
+    input:focus{
+      border-color: rgba(62,95,81,.55);
+      box-shadow: 0 0 0 4px rgba(62,95,81,.12);
+      background: rgba(255,255,255,.92);
+    }
+
+    .cta{
+      margin-top: 12px;
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button{
+      width: min(100%, 360px);
+      border: 1px solid rgba(0,0,0,.08);
+      border-radius: 12px;
+      padding: 12px 16px;
+      background: linear-gradient(180deg, var(--sage), var(--sage-dark));
+      color: #fff;
+      font-size: 15px;
+      letter-spacing: .01em;
+      cursor: pointer;
+    }
+
+    button:hover{ filter: brightness(1.03); }
+    button:active{ transform: translateY(1px); }
+
+    .micro{
+      margin: 10px 0 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .divider{
+      border: none;
+      border-top: 1px solid var(--line);
+      margin: 38px 0;
+    }
+
+    section{
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    h2{
+      font-size: clamp(30px, 4vw, 40px);
+      line-height: 1.12;
+      margin-bottom: 12px;
+    }
+
+    .copy{
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      color: rgba(43,42,40,.85);
+      margin: 0 auto;
+      max-width: 56ch;
+    }
+
+    .copy p{ margin: 0 0 14px; }
+    .copy .em{ font-style: italic; }
+
+    ul{
+      list-style: none;
+      padding: 0;
+      margin: 14px auto 0;
+      max-width: 520px;
+      color: rgba(43,42,40,.86);
+    }
+
+    li{
+      margin: 10px 0;
+      position: relative;
+      padding-left: 18px;
+      text-align: left;
+      font-size: 16px;
+    }
+    li:before{
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: rgba(43,42,40,.6);
+    }
+
+    .quote{
+      margin-top: 18px;
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-style: italic;
+      color: rgba(43,42,40,.78);
+      font-size: 18px;
+    }
+
+    footer{
+      text-align: center;
+      padding: 34px 0 44px;
+      color: rgba(43,42,40,.65);
+    }
+
+    .tagline{
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin-top: 8px;
+      opacity: .85;
+    }
+
+    .note{
+      font-size: 13px;
+      color: rgba(43,42,40,.58);
+      margin-top: 14px;
+    }
+
+    /* Tiny anchor style */
+    a{ color: inherit; }
+    a:hover{ opacity: .9; }
+
   </style>
 </head>
 
 <body>
-  <!-- Top Nav -->
-  <header class="wrap" style="padding:20px var(--pad);">
-    <nav aria-label="Primary">
-      <a href="#top"><strong>SAGE Spencer</strong></a>
-      <a href="#series">Series</a>
-      <a href="#what-you-get">What you get</a>
-      <a href="#how-it-works">How it works</a>
-      <a href="#for-you">For you</a>
-      <a href="#join">Join</a>
-    </nav>
-  </header>
+  <div class="wrap">
+    <div class="brand">SAGE SPENCER</div>
 
-  <!-- HERO (Above the fold) -->
-  <main id="top" class="wrap hero">
-    <div class="grid grid-2">
-      <div>
-        <h1>Financial Freedom Starts Today.</h1>
-        <p style="font-size:18px; max-width: 54ch;">
-          Not because money is everything… <br />
-          but because <strong>freedom</strong> is.
-        </p>
-        <p class="small">Daily guidance. Small steps. Real action. Quiet consistency.</p>
+    <header class="hero" id="top">
+      <h1>Financial Freedom.</h1>
+      <p class="sub">Not because money is everything… but because freedom is. Quiet steps. Real action. Delivered to you.</p>
 
-        <p style="margin-top:22px;">
-          <a class="btn" href="#join">Start the Series</a>
-        </p>
+      <div class="card" id="join">
+        <!-- FORM (layout + placeholders). We'll wire action in the next step. -->
+        <form id="signup-form" method="post" action="#">
+          <div class="row">
+            <div class="field">
+              <label for="firstName">First name</label>
+              <input id="firstName" name="firstName" type="text" autocomplete="given-name" placeholder="Enter your name…" required>
+            </div>
 
-        <p class="small">No spam. Unsubscribe anytime. Your privacy stays protected.</p>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="Enter your email…" required>
+            </div>
+          </div>
+
+          <div class="cta">
+            <button type="submit">Start the Financial Freedom Series</button>
+          </div>
+
+          <p class="micro">No spam. No noise. Unsubscribe anytime.</p>
+        </form>
+      </div>
+    </header>
+
+    <hr class="divider" />
+
+    <section aria-label="A note from Sage">
+      <h2>A note from Sage</h2>
+      <div class="copy">
+        <p>Baby… let’s talk about financial freedom.</p>
+        <p>Not because money is everything…<br>but because <span class="em">freedom</span> is.</p>
+
+        <p>When you have financial control, you breathe different.<br>
+        You choose different.<br>
+        You stop begging life for permission.</p>
+
+        <p>This series is not wishful thinking.<br>
+        Not “one day” energy.</p>
+
+        <p>This is real time.<br>
+        Recorded days.<br>
+        Small steps. Every day.<br>
+        One decision at a time—toward your financial freedom.</p>
+
+        <p>Yes… we’ll use manifestation and the Law of Attraction—<br>
+        but we’ll back it with action.<br>
+        Because money doesn’t follow hope…<br>
+        money follows alignment and execution.</p>
+
+        <p><strong>If you’re ready to build—quietly, consistently—join my email list.</strong></p>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section aria-label="What you'll receive">
+      <h2>What you’ll receive</h2>
+      <ul>
+        <li>Daily steps you can complete in minutes</li>
+        <li>Alignment prompts (mindset that stays practical)</li>
+        <li>Simple execution plans—no overwhelm</li>
+        <li>Consistency guardrails when you drift</li>
+        <li>Calm motivation that keeps you locked in</li>
+      </ul>
+      <p class="quote">One decision. One day. One repeat.</p>
+    </section>
+
+    <hr class="divider" />
+
+    <section aria-label="This series is different">
+      <h2>This isn’t “someday” content.</h2>
+      <div class="copy">
+        <p>No hype. No pressure.</p>
+        <p>Just a clear path: <strong>alignment</strong> + <strong>execution</strong>.</p>
+        <p>I write to help you move—quietly, consistently—until your bank account matches your standards.</p>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section aria-label="Join again">
+      <h2>Start today.</h2>
+      <p class="sub" style="margin-bottom:18px;">If you’re not late… you’re right on time.</p>
+
+      <div class="card">
+        <!-- Duplicate form for convenience; same IDs are avoided -->
+        <form id="signup-form-2" method="post" action="#">
+          <div class="row">
+            <div class="field">
+              <label for="firstName2">First name</label>
+              <input id="firstName2" name="firstName" type="text" autocomplete="given-name" placeholder="Enter your name…" required>
+            </div>
+
+            <div class="field">
+              <label for="email2">Email</label>
+              <input id="email2" name="email" type="email" autocomplete="email" placeholder="Enter your email…" required>
+            </div>
+          </div>
+
+          <div class="cta">
+            <button type="submit">Let Sage guide me</button>
+          </div>
+
+          <p class="micro">No spam. Unsubscribe anytime.</p>
+        </form>
       </div>
 
-      <!-- FORM CARD (layout only; no wiring yet) -->
-      <aside class="card" id="join" aria-label="Join the Financial Freedom Series">
-        <h2 style="margin-top:0;">Join the Financial Freedom Series</h2>
-        <p class="small">Get the first email today. Then daily steps to keep you locked in.</p>
+      <p class="note">Form is currently a layout placeholder. Next step: we’ll connect it to your email tool + a thank-you page.</p>
+    </section>
 
-        <!-- Step 1 = layout only. We'll wire this in the next step. -->
-        <form id="signup-form" method="post" action="#">
-          <label for="firstName" class="small">First name</label><br />
-          <input id="firstName" name="firstName" type="text" autocomplete="given-name" required
-                 style="width:100%; padding:12px; border-radius:12px; border:1px solid #ddd; margin:6px 0 14px;" />
-
-          <label for="email" class="small">Email address</label><br />
-          <input id="email" name="email" type="email" autocomplete="email" required
-                 style="width:100%; padding:12px; border-radius:12px; border:1px solid #ddd; margin:6px 0 14px;" />
-
-          <button type="submit"
-                  style="width:100%; padding:12px; border-radius:12px; border:1px solid #111; background:#111; color:#fff;">
-            Start the Series
-          </button>
-
-          <p class="small" style="margin-top:10px;">
-            No spam. Unsubscribe anytime.
-          </p>
-        </form>
-      </aside>
-    </div>
-  </main>
-
-  <div class="divider"></div>
-
-  <!-- SCRIPT-BASED INTRO -->
-  <section id="series" class="wrap">
-    <h2>A note from SAGE</h2>
-    <p class="note">
-Baby… let’s talk about financial freedom.
-
-Not because money is everything…
-but because freedom is.
-
-When you have financial control, you breathe different.
-You choose different.
-You stop begging life for permission.
-
-This series isn’t wishful thinking.
-Not “one day” energy.
-
-This is real time.
-Recorded days.
-Small steps. Every day.
-One decision at a time—toward your financial freedom.
-
-We’ll use manifestation and the Law of Attraction—
-but we’ll back it with action.
-Because money doesn’t follow hope…
-money follows alignment and execution.
-    </p>
-
-    <p style="margin-top:18px;">
-      If you’re ready to build—quietly, consistently—join my email list.
-    </p>
-
-    <p><a class="btn" href="#join">Join the Email List</a></p>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- WHAT YOU’LL GET -->
-  <section id="what-you-get" class="wrap">
-    <h2>What you’ll receive</h2>
-    <ul class="list">
-      <li><strong>Daily direction</strong> when motivation drops</li>
-      <li><strong>Simple money moves</strong> you can actually stick to</li>
-      <li><strong>Mindset + execution</strong> (alignment and action)</li>
-      <li><strong>Short prompts</strong> to keep you consistent</li>
-      <li><strong>Weekly check-ins</strong> so you don’t drift</li>
-    </ul>
-
-    <p style="margin-top:14px;">
-      I’ll guide you, motivate you, and keep you locked in… until your bank account matches your standards.
-    </p>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- HOW IT WORKS -->
-  <section id="how-it-works" class="wrap">
-    <h2>How the series works</h2>
-    <ol class="list">
-      <li>Join the list (name + email)</li>
-      <li>Get your first email today</li>
-      <li>Follow the daily steps—small, consistent, real</li>
-      <li>Track progress and build momentum</li>
-    </ol>
-    <p class="small" style="margin-top:14px;">Quiet discipline creates loud results.</p>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- WHO IT'S FOR -->
-  <section id="for-you" class="wrap">
-    <h2>This is for you if…</h2>
-    <ul class="list">
-      <li>You’re tired of “someday” and ready for <strong>recorded days</strong></li>
-      <li>You want <strong>financial control</strong>, not financial stress</li>
-      <li>You’re ready to be consistent—even when it’s boring</li>
-      <li>You want <strong>manifestation with action</strong>, not just quotes</li>
-    </ul>
-
-    <p class="small" style="margin-top:14px;">
-      If you want overnight miracles with zero effort—this won’t be your lane.
-    </p>
-
-    <p style="margin-top:18px;"><a class="btn" href="#join">Start My Financial Freedom</a></p>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- FOOTER -->
-  <footer class="wrap">
-    <p><strong>SAGE Spencer</strong> — Your life partner in growth.</p>
-    <p class="small">© <span id="year"></span> SageSpencer.com</p>
-  </footer>
+    <footer>
+      <div class="brand" style="padding-top:0;">SAGE SPENCER</div>
+      <div class="tagline">Whispering strength into your days.</div>
+      <div class="note">© <span id="year"></span> SageSpencer.com</div>
+    </footer>
+  </div>
 
   <script>
-    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
