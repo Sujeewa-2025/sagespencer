@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Sage Spencer</title>
+  <meta name="description" content="Privacy Policy for SageSpencer.com" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ink:#2b2a2a;
+      --ink-soft: rgba(43,42,42,.78);
+
+      --gold-1:#f7d992;
+      --gold-2:#f2c457;
+
+      --card-border: rgba(130, 92, 18, .22);
+      --card-shadow: 0 22px 60px rgba(29, 22, 6, .18);
+      --soft-shadow: 0 14px 34px rgba(29, 22, 6, .12);
+
+      --radius-lg: 22px;
+      --max: 920px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 900px at 20% 18%, rgba(255,255,255,.30), rgba(255,255,255,0) 55%),
+        radial-gradient(1200px 900px at 86% 20%, rgba(255,255,255,.22), rgba(255,255,255,0) 58%),
+        radial-gradient(1200px 900px at 50% 85%, rgba(255,255,255,.20), rgba(255,255,255,0) 58%),
+        linear-gradient(180deg, var(--gold-1), var(--gold-2) 55%, #edb44a 100%);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body:before{
+      content:"";
+      position: fixed;
+      inset: 0;
+      pointer-events:none;
+      opacity: .60;
+      background:
+        radial-gradient(900px 520px at 18% 35%, rgba(255,255,255,.22), rgba(255,255,255,0) 62%),
+        radial-gradient(900px 520px at 85% 40%, rgba(255,255,255,.18), rgba(255,255,255,0) 65%),
+        repeating-linear-gradient(0deg, rgba(255,255,255,.05), rgba(255,255,255,.05) 1px, rgba(255,255,255,0) 3px, rgba(255,255,255,0) 6px);
+      mix-blend-mode: soft-light;
+      filter: blur(.2px);
+    }
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 26px 18px 60px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      margin: 6px 0 14px;
+    }
+
+    .brand{
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: .02em;
+      color: rgba(67,46,10,.92);
+      text-shadow: 0 1px 0 rgba(255,255,255,.35);
+    }
+
+    .nav a{
+      font-size: 13px;
+      color: rgba(43,42,42,.74);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(43,42,42,.25);
+      padding-bottom: 2px;
+      margin-left: 12px;
+    }
+    .nav a:hover{
+      color: rgba(43,42,42,.92);
+      border-bottom-color: rgba(43,42,42,.55);
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.58), rgba(255,255,255,.38));
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--card-shadow);
+      padding: 26px 22px 22px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:before{
+      content:"";
+      position:absolute;
+      inset:-80px -80px -140px -80px;
+      background:
+        radial-gradient(1100px 420px at 50% 34%, rgba(255,255,255,.40), rgba(255,255,255,0) 62%),
+        radial-gradient(1200px 520px at 50% 85%, rgba(130,92,18,.22), rgba(130,92,18,0) 62%),
+        linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,0));
+      opacity: .85;
+      pointer-events:none;
+    }
+    .content{ position: relative; z-index: 1; }
+
+    h1{
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      font-size: clamp(30px, 3.2vw, 44px);
+      letter-spacing: .01em;
+      margin: 0 0 8px;
+      text-align: center;
+      line-height: 1.1;
+      text-wrap: balance;
+      color: rgba(43,42,42,.92);
+    }
+    .meta{
+      text-align:center;
+      margin: 0 0 18px;
+      font-size: 12px;
+      color: rgba(43,42,42,.68);
+      font-style: italic;
+    }
+
+    .legal{
+      max-width: 78ch;
+      margin: 0 auto;
+      color: rgba(43,42,42,.78);
+      line-height: 1.75;
+      font-size: 14px;
+    }
+    .legal h2{
+      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      font-weight: 700;
+      font-size: 22px;
+      margin: 18px 0 6px;
+      color: rgba(43,42,42,.90);
+    }
+    .legal h3{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      letter-spacing: .02em;
+      margin: 14px 0 6px;
+      color: rgba(43,42,42,.86);
+    }
+    .legal ul{ margin: 8px 0 12px 18px; padding: 0; }
+    .legal li{ margin: 6px 0; }
+    .legal a{
+      color: rgba(43,42,42,.78);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(43,42,42,.28);
+      padding-bottom: 1px;
+    }
+    .legal a:hover{
+      color: rgba(43,42,42,.92);
+      border-bottom-color: rgba(43,42,42,.55);
+    }
+
+    .note{
+      background: rgba(255,255,255,.50);
+      border: 1px solid rgba(90,63,12,.14);
+      border-radius: 14px;
+      padding: 12px 12px;
+      box-shadow: var(--soft-shadow);
+      margin: 14px 0;
+    }
+
+    footer{
+      text-align:center;
+      padding-top: 16px;
+      font-size: 12px;
+      color: rgba(43,42,42,.62);
+    }
+    footer a{
+      color: rgba(43,42,42,.70);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(43,42,42,.25);
+      padding-bottom: 2px;
+    }
+    footer a:hover{
+      color: rgba(43,42,42,.92);
+      border-bottom-color: rgba(43,42,42,.55);
+    }
+
+    @media (max-width: 520px){
+      .card{ padding: 22px 16px 18px; }
+      .topbar{ flex-direction: column; align-items: center; }
+      .nav a{ margin: 0 10px; }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">Sage Spencer</div>
+      <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="content">
+        <h1>Privacy Policy</h1>
+        <p class="meta">Last updated: <span id="updated"></span></p>
+
+        <div class="legal">
+          <div class="note">
+            <strong>Simple promise:</strong> We only collect what we need to send your emails. We don’t sell your data.
+          </div>
+
+          <h2>1) Who we are</h2>
+          <p>
+            This website is operated by <strong>Sage Spencer</strong> (“we”, “us”, “our”).
+            If you have questions about this Privacy Policy or your data, contact us at
+            <a href="mailto:hello@sagespencer.com">hello@sagespencer.com</a>.
+          </p>
+
+          <h2>2) What data we collect</h2>
+          <p>When you join the email list, we may collect:</p>
+          <ul>
+            <li><strong>Name</strong> (if you provide it)</li>
+            <li><strong>Email address</strong></li>
+            <li>Basic signup details (e.g., time of signup, which form you used)</li>
+          </ul>
+
+          <h2>3) Why we collect it</h2>
+          <p>We use your data to:</p>
+          <ul>
+            <li>Send the <strong>21‑Day Email Journey</strong> and related emails you requested</li>
+            <li>Manage subscriptions (unsubscribes, preferences)</li>
+            <li>Improve deliverability and prevent abuse/spam</li>
+          </ul>
+
+          <h2>4) Legal basis (GDPR)</h2>
+          <p>
+            We process your information based on <strong>consent</strong> (you asked to receive emails).
+            You can withdraw your consent at any time by clicking the unsubscribe link in any email.
+          </p>
+
+          <h2>5) Email service provider (Brevo)</h2>
+          <p>
+            We use <strong>Brevo</strong> (Sendinblue SAS) to store subscriber details and send emails.
+            Brevo processes your data on our behalf to provide email delivery and list management.
+          </p>
+
+          <h2>6) How long we keep your data</h2>
+          <p>
+            We keep your subscriber data for as long as you remain subscribed.
+            If you unsubscribe, we will stop sending emails and may retain a minimal record to respect your unsubscribe request.
+          </p>
+
+          <h2>7) Sharing and selling</h2>
+          <p>
+            We do not sell your personal data. We only share data with service providers we use to run the website and send emails (such as Brevo).
+          </p>
+
+          <h2>8) Your rights</h2>
+          <p>Depending on your location, you may have rights to:</p>
+          <ul>
+            <li>Access the personal data we hold about you</li>
+            <li>Correct inaccurate data</li>
+            <li>Request deletion</li>
+            <li>Withdraw consent</li>
+            <li>Object to processing in certain situations</li>
+          </ul>
+          <p>
+            To exercise these rights, email <a href="mailto:hello@sagespencer.com">hello@sagespencer.com</a>.
+          </p>
+
+          <h2>9) Cookies and analytics</h2>
+          <p>
+            This site may use minimal cookies required for basic functionality. If we add analytics or advertising in the future,
+            we’ll update this policy and (where required) request consent.
+          </p>
+
+          <h2>10) Updates to this policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time. The “Last updated” date above reflects the latest version.
+          </p>
+
+          <div class="note">
+            <strong>Contact:</strong> <a href="mailto:hello@sagespencer.com">hello@sagespencer.com</a>
+          </div>
+        </div>
+
+        <footer>
+          © <span id="year"></span> SageSpencer.com ·
+          <a href="index.html">Home</a> ·
+          <a href="terms.html">Terms &amp; Conditions</a>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const d = new Date();
+    document.getElementById('updated').textContent =
+      d.toLocaleDateString(undefined, {year:'numeric', month:'long', day:'numeric'});
+  </script>
+</body>
+</html>
