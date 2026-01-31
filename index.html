@@ -501,32 +501,50 @@
 
 <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 <style>
+
   /* Brevo embed: keep it quiet + blend with site */
   .sib-form{ background: transparent !important; }
   #sib-form-container{ max-width: 100% !important; }
+
+  /* Make the opt-in card narrower on desktop, full-width on mobile */
   #sib-container{
-    max-width: 100% !important;
-    border-radius: 14px !important;
-    border: 1px solid rgba(90,63,12,.14) !important;
-    background: rgba(255,255,255,.62) !important;
-    box-shadow: 0 14px 34px rgba(29,22,6,.12) !important;
+    width: 100% !important;
+    max-width: 560px !important;          /* 👈 smaller card */
+    margin: 0 auto !important;
+    border-radius: 16px !important;
+    border: 1px solid rgba(90,63,12,.16) !important;
+
+    /* Gold-tinted background to match the page */
+    background: rgba(252, 192, 44, .22) !important;  /* #fcc02c tint */
+    backdrop-filter: blur(2px);
+    box-shadow: 0 16px 40px rgba(29,22,6,.14) !important;
   }
+
+  /* Hide Brevo message panels until triggered */
+  #sib-form-container #error-message,
+  #sib-form-container #success-message{
+    display: none !important;
+  }
+
   #sib-container .entry__label{
     font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
     font-size: 13px !important;
-    color: rgba(43,42,42,.84) !important;
+    color: rgba(20,16,8,.86) !important;
   }
+
   #sib-container input{
     border-radius: 12px !important;
-    border: 1px solid rgba(90,63,12,.18) !important;
+    border: 1px solid rgba(90,63,12,.22) !important;
     padding: 12px 12px !important;
+    background: rgba(255,255,255,.70) !important;
     font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif !important;
   }
   #sib-container input:focus{
     outline: none !important;
-    border-color: rgba(184,127,20,.55) !important;
+    border-color: rgba(184,127,20,.65) !important;
     box-shadow: 0 0 0 4px rgba(184,127,20,.18) !important;
   }
+
   #sib-container .sib-form-block__button{
     width: 100% !important;
     border-radius: 12px !important;
@@ -535,8 +553,15 @@
     border: 1px solid rgba(85,58,10,.35) !important;
     font-weight: 800 !important;
   }
+
   /* Hide Brevo helper text under fields for a cleaner look */
   #sib-container .entry__specification{ display:none !important; }
+
+  /* A little breathing room around the embedded form on large screens */
+  @media (min-width: 900px){
+    .sib-form{ padding-left: 8px !important; padding-right: 8px !important; }
+  }
+
 </style>
 
 </head>
