@@ -435,6 +435,56 @@
       .sub{ font-size: 14px; }
     }
 
+  
+    /* Full 21-day content map */
+    .journey-grid{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 12px;
+      padding: 12px;
+    }
+    .week-card{
+      background: rgba(255,255,255,.58);
+      border: 1px solid rgba(90,63,12,.14);
+      border-radius: 16px;
+      padding: 12px 12px 10px;
+      box-shadow: 0 10px 24px rgba(29,22,6,.10);
+    }
+    .week-title{
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-weight: 900;
+      letter-spacing: .02em;
+      font-size: 13px;
+      text-align: center;
+      color: rgba(43,42,42,.86);
+      margin-bottom: 6px;
+    }
+    .week-sub{
+      text-align: center;
+      font-size: 12px;
+      color: rgba(43,42,42,.68);
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+    .week-list{
+      margin: 0;
+      padding-left: 16px;
+      color: rgba(43,42,42,.78);
+      display: grid;
+      gap: 8px;
+      font-size: 12.5px;
+      line-height: 1.55;
+    }
+    .week-list li{ margin: 0; }
+    .day{
+      font-weight: 800;
+      color: rgba(43,42,42,.86);
+    }
+    @media (max-width: 860px){
+      .journey-grid{ grid-template-columns: 1fr; }
+      .week-list{ font-size: 13px; }
+    }
+
   </style>
 </head>
 
@@ -454,36 +504,15 @@
         </p>
 
         <ul class="bullets">
-          <li>
-            <svg class="check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M20 6L9 17l-5-5" stroke="#b87f14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Reset your money identity <span style="color:rgba(43,42,42,.70)">(without toxic positivity)</span></span>
-          </li>
-          <li>
-            <svg class="check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            </svg><span>Daily 3–5 minute emails <span style="color:rgba(43,42,42,.70)">(comfort + clarity + a real step)</span></span></li>
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M20 6L9 17l-5-5" stroke="#b87f14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Build consistency with simple daily actions <span style="color:rgba(43,42,42,.70)">(2–5 minutes)</span></span>
-          </li>
-          <li>
-            <svg class="check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            </svg><span>LOA energy, but grounded in actions that create proof</span></li>
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
               <path d="M20 6L9 17l-5-5" stroke="#b87f14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Reduce emotional spending + stop “leak” habits</span>
-          </li>
-          <li>
-            <svg class="check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M20 6L9 17l-5-5" stroke="#b87f14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Create a plan that feels steady, not stressful</span>
-          </li>
-          <li>
-            <svg class="check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M20 6L9 17l-5-5" stroke="#b87f14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span>Start trusting yourself again — with evidence</span>
-          </li>
+            </svg><span>No shame. No pressure. Just steady progress—together.</span></li>
         </ul>
 
         <form class="form" method="post" action="#" id="optin">
@@ -492,9 +521,9 @@
             <input class="field" type="email" name="email" autocomplete="email" placeholder="Email Address" required>
           </div>
 
-          <button class="btn" type="submit">Start the 21‑Day Journey</button>
+          <button class="btn" type="submit">Start Day 1 With Me</button>
 
-          <div class="micro"><span class="free">100% free.</span> Practical. Unsubscribe anytime.</div>
+          <div class="micro">Unsubscribe anytime.</div>
         </form>
 
         <div class="section">
@@ -548,66 +577,55 @@
 
           <div class="centerline">No long lectures. No guilt. Just clear direction.</div>
 
-          <div class="map" aria-label="The 21-day map">
-            <div class="map-head">The 21‑Day Map</div>
-            <div class="cols">
-              <div class="col">
-                <h3>Week 1 &nbsp; Alignment</h3>
-                <ul>
-                  <li>
-                    <svg class="check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <path d="M20 6L9 17l-5-5" stroke="#b87f14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span>Reset your setpoint</span>
-                  </li>
-                  <li>
-                    <svg class="check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <path d="M20 6L9 17l-5-5" stroke="#b87f14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span>Emotional triggers</span>
-                  </li>
-                </ul>
-              </div>
+          <div class="map" aria-label="21-day content map">
+            <div class="map-head">21‑Day Content Map</div>
 
-              <div class="col">
-                <h3>Week 2 &nbsp; Execution</h3>
-                <ul>
-                  <li>
-                    <svg class="check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <path d="M20 6L9 17l-5-5" stroke="#b87f14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span>Track + Save</span>
-                  </li>
-                  <li>
-                    <svg class="check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <path d="M20 6L9 17l-5-5" stroke="#b87f14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span>1% Rule</span>
-                  </li>
+            <div class="journey-grid">
+              <section class="week-card" aria-label="Week 1 Alignment">
+                <div class="week-title">Week 1 — Alignment</div>
+                <div class="week-sub">Reset your money story gently.</div>
+                <ul class="week-list">
+                  <li><span class="day">Day 1:</span> Your Money Setpoint (why you return to “stuck”) + one tiny action</li>
+                  <li><span class="day">Day 2:</span> Wanting vs Needing (calm desire attracts better decisions)</li>
+                  <li><span class="day">Day 3:</span> Identity Shift: “I’m becoming the kind of man who…” (soft consistency)</li>
+                  <li><span class="day">Day 4:</span> Self‑Respect & Money (boundaries without guilt)</li>
+                  <li><span class="day">Day 5:</span> Emotional Spending (spot the trigger, soothe the urge)</li>
+                  <li><span class="day">Day 6:</span> Receiving & Allowing (opening to help, opportunities, better choices)</li>
+                  <li><span class="day">Day 7:</span> Weekly Reset Ritual (review + gratitude + gentle plan)</li>
                 </ul>
-              </div>
+              </section>
 
-              <div class="col">
-                <h3>Week 3 &nbsp; Expansion</h3>
-                <ul>
-                  <li>
-                    <svg class="check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <path d="M20 6L9 17l-5-5" stroke="#b87f14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span>Opportunities</span>
-                  </li>
-                  <li>
-                    <svg class="check" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                      <path d="M20 6L9 17l-5-5" stroke="#b87f14" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span>Higher standards</span>
-                  </li>
+              <section class="week-card" aria-label="Week 2 Real-World Proof">
+                <div class="week-title">Week 2 — Real‑World Proof</div>
+                <div class="week-sub">Simple systems that feel light.</div>
+                <ul class="week-list">
+                  <li><span class="day">Day 8:</span> The Calm Tracker (a 2‑minute daily check‑in)</li>
+                  <li><span class="day">Day 9:</span> The 1% Better Rule (tiny savings + tiny income move)</li>
+                  <li><span class="day">Day 10:</span> A Kind Budget (a plan that doesn’t punish you)</li>
+                  <li><span class="day">Day 11:</span> The “Pause Rule” (protect yourself from impulse spending)</li>
+                  <li><span class="day">Day 12:</span> Clean Up Money Leaks (subscriptions + small drains)</li>
+                  <li><span class="day">Day 13:</span> Expand Your Income Gently (skills list → choose 1 path)</li>
+                  <li><span class="day">Day 14:</span> Money Confidence Day (review wins + reinforce the new story)</li>
                 </ul>
-              </div>
+              </section>
+
+              <section class="week-card" aria-label="Week 3 Expansion">
+                <div class="week-title">Week 3 — Expansion</div>
+                <div class="week-sub">Raise standards, grow capacity, keep it.</div>
+                <ul class="week-list">
+                  <li><span class="day">Day 15:</span> Your Standards (what you tolerate costs you—softly, truthfully)</li>
+                  <li><span class="day">Day 16:</span> Calm Wealth Mindset (how steady people decide)</li>
+                  <li><span class="day">Day 17:</span> Ask Bigger (opportunities, negotiation, courage—without fear)</li>
+                  <li><span class="day">Day 18:</span> Value & Offering (what can you give that people pay for?)</li>
+                  <li><span class="day">Day 19:</span> Pressure to Peace (staying steady with debt/worry)</li>
+                  <li><span class="day">Day 20:</span> Your 90‑Day Calm Money Plan (simple roadmap)</li>
+                  <li><span class="day">Day 21:</span> Graduation (lock the rhythm + your next 30 days)</li>
+                </ul>
+              </section>
             </div>
           </div>
 
-          <div class="fit" aria-label="Fit check">
+<div class="fit" aria-label="Fit check">
             <div class="fitbox">
               <h3>This is for you if…</h3>
               <ul>
