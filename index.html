@@ -497,7 +497,16 @@
       border-bottom-color: rgba(43,42,42,.55);
     }
 
-  </style>
+  
+/* === Consistent single background everywhere (no bands) === */
+body{
+  background: #f6d991 !important; /* soft gold */
+}
+body:before{
+  display:none !important; /* remove fixed overlay that can create banding */
+}
+
+</style>
 
 <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 <style>
