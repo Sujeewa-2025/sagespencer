@@ -235,8 +235,9 @@
   .t-person { display: flex; align-items: center; gap: 10px; }
   .t-avatar {
     width: 34px; height: 34px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Playfair Display', serif; font-weight: 700; color: #fff; font-size: 13px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
   }
   .t-name { font-family: 'Lora', serif; font-size: 13px; color: var(--muted); }
 
@@ -413,7 +414,7 @@
       <div class="t-stars">★★★★★</div>
       <p class="t-quote">"I went in rolling my eyes and came out a little spooked, honestly."</p>
       <div class="t-person">
-        <div class="t-avatar" style="background:#b3679e;">J</div>
+        <img class="t-avatar" src="avatar-j.jpg" alt="J.">
         <div class="t-name">J. — verified reader</div>
       </div>
     </div>
@@ -421,7 +422,7 @@
       <div class="t-stars">★★★★★</div>
       <p class="t-quote">"Took five minutes and gave me a lot to think about on the drive home."</p>
       <div class="t-person">
-        <div class="t-avatar" style="background:#8a4b78;">M</div>
+        <img class="t-avatar" src="avatar-m.jpg" alt="M.">
         <div class="t-name">M. — verified reader</div>
       </div>
     </div>
@@ -429,7 +430,7 @@
       <div class="t-stars">★★★★☆</div>
       <p class="t-quote">"Sent it to my sister and now she wants one too."</p>
       <div class="t-person">
-        <div class="t-avatar" style="background:#d8a85a;">R</div>
+        <img class="t-avatar" src="avatar-r.jpg" alt="R.">
         <div class="t-name">R. — verified reader</div>
       </div>
     </div>
