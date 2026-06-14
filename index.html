@@ -34,29 +34,48 @@
   .topbar {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     max-width: 760px;
     margin: 0 auto;
-    padding: 22px 20px;
+    padding: 26px 20px;
   }
   .topbar img {
-    width: 46px;
-    height: 46px;
+    width: 68px;
+    height: 68px;
     border-radius: 50%;
     object-fit: cover;
     background: linear-gradient(135deg, #b3679e, #f3c98b);
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 16px rgba(179, 103, 158, 0.28);
+    flex-shrink: 0;
   }
   .topbar .brand-name {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 19px;
     margin: 0;
   }
   .topbar .brand-tag {
     font-family: 'Lora', serif;
     font-size: 13px;
     color: var(--muted);
-    margin: 2px 0 0;
+    margin: 3px 0 0;
+  }
+  .topbar .brand-cred {
+    font-family: 'Lora', serif;
+    font-size: 12px;
+    color: var(--accent-dark);
+    margin: 6px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .topbar .brand-cred .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #6bbf7b;
+    display: inline-block;
   }
 
   /* ---------- HERO ---------- */
@@ -298,6 +317,7 @@
   <div>
     <p class="brand-name">Sage Spencer</p>
     <p class="brand-tag">Notes on love, mindset & modern curiosities</p>
+    <p class="brand-cred"><span class="dot"></span>Writer · 50K+ readers · Updated June 2026</p>
   </div>
 </div>
 
