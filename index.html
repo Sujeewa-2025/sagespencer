@@ -4,75 +4,86 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>I Looked Into the "Soulmate Sketch" Trend — Sage Spencer</title>
-<meta name="description" content="A look at the psychic sketch trend everyone's talking about — what it is, how it works, and what people are saying.">
+<meta name="description" content="A personal story about the 'soulmate sketch' trend — what happened when I tried it myself.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #fff8f3;
+    --page-bg-start: #f7ece1;
+    --page-bg-end: #f1ddd1;
     --text: #3a2e35;
     --muted: #8a7a85;
     --accent: #b3679e;
     --accent-dark: #8a4b78;
     --gold: #d8a85a;
-    --card: #ffffff;
-    --border: #f0e0e8;
-    --gradient: linear-gradient(135deg, #2c1e3d 0%, #5a3a6b 35%, #b3679e 75%, #f3c98b 100%);
+    --card: #fffefc;
+    --tint: #faf1ea;
+    --border: #f0e2da;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body {
     margin: 0;
     font-family: 'Lora', Georgia, serif;
-    background: var(--bg);
+    background: linear-gradient(160deg, var(--page-bg-start) 0%, var(--page-bg-end) 100%);
     color: var(--text);
-    line-height: 1.7;
+    line-height: 1.75;
+    padding: 48px 24px;
   }
   h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
+
+  /* ---------- PAGE FRAME ---------- */
+  .page {
+    max-width: 880px;
+    margin: 0 auto;
+    background: var(--card);
+    border-radius: 28px;
+    box-shadow: 0 30px 80px rgba(70, 40, 55, 0.12), 0 6px 20px rgba(70, 40, 55, 0.06);
+    overflow: hidden;
+  }
 
   /* ---------- TOP BAR ---------- */
   .topbar {
     display: flex;
     align-items: center;
-    gap: 16px;
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 26px 20px;
+    gap: 20px;
+    padding: 44px 56px 32px;
+    border-bottom: 1px solid var(--border);
   }
   .topbar img {
-    width: 104px;
-    height: 104px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     object-fit: cover;
     background: linear-gradient(135deg, #b3679e, #f3c98b);
     border: 3px solid #ffffff;
-    box-shadow: 0 4px 16px rgba(179, 103, 158, 0.28);
+    box-shadow: 0 4px 16px rgba(179, 103, 158, 0.24);
     flex-shrink: 0;
   }
   .topbar .brand-name {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 28px;
+    font-size: 26px;
     margin: 0;
     color: #2c1e3d;
     letter-spacing: 0.3px;
   }
   .topbar .brand-tag {
     font-family: 'Lora', serif;
-    font-size: 16px;
+    font-size: 15px;
     color: var(--text);
     margin: 5px 0 0;
   }
   .topbar .brand-cred {
     font-family: 'Lora', serif;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     color: var(--accent-dark);
     margin: 10px 0 0;
     display: flex;
     align-items: center;
     gap: 8px;
-    background: rgba(179, 103, 158, 0.1);
+    background: var(--tint);
     border-radius: 50px;
     padding: 6px 14px;
     width: fit-content;
@@ -87,58 +98,45 @@
     flex-shrink: 0;
   }
 
-  /* ---------- HERO ---------- */
+  /* ---------- HERO (calm editorial) ---------- */
   .hero {
-    position: relative;
-    overflow: hidden;
-    background: var(--gradient);
-    color: #fff;
+    padding: 56px 56px 48px;
     text-align: center;
-    padding: 70px 20px 90px;
-  }
-  .hero .sparkle {
-    position: absolute;
-    color: rgba(255,255,255,0.55);
-    font-size: 20px;
-    animation: twinkle 3s ease-in-out infinite;
-  }
-  @keyframes twinkle {
-    0%, 100% { opacity: 0.25; transform: scale(0.8); }
-    50% { opacity: 1; transform: scale(1.15); }
   }
   .hero-eyebrow {
     font-family: 'Lora', serif;
     letter-spacing: 3px;
     text-transform: uppercase;
     font-size: 12px;
-    color: #f3c98b;
-    margin-bottom: 18px;
+    font-weight: 600;
+    color: var(--accent-dark);
+    margin: 0 0 18px;
   }
   .hero h1 {
-    font-size: 38px;
-    line-height: 1.3;
+    font-size: 42px;
+    line-height: 1.25;
     max-width: 620px;
     margin: 0 auto 18px;
-    text-shadow: 0 2px 18px rgba(0,0,0,0.25);
+    color: #2c1e3d;
   }
   .hero p.sub {
-    font-size: 18px;
-    max-width: 520px;
+    font-size: 19px;
+    line-height: 1.7;
+    font-style: italic;
+    max-width: 480px;
     margin: 0 auto 36px;
-    color: rgba(255,255,255,0.88);
+    color: var(--muted);
   }
 
-  /* Sketch portrait mockup */
+  /* Sketch — editorial inset photo with caption */
   .sketch-frame {
-    width: 230px;
-    height: 280px;
-    margin: 0 auto 36px;
-    background: #f6efe4;
-    border-radius: 6px;
-    box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    width: 260px;
+    max-width: 78%;
+    margin: 0 auto 12px;
+    border-radius: 14px;
     overflow: hidden;
-    transform: rotate(-3deg);
-    border: 6px solid #fff;
+    box-shadow: 0 18px 44px rgba(70, 40, 55, 0.16);
+    aspect-ratio: 4 / 5;
   }
   .sketch-frame img {
     width: 100%;
@@ -146,50 +144,64 @@
     object-fit: cover;
     display: block;
   }
-
-  .cta-button {
-    display: inline-block;
+  .sketch-caption {
     font-family: 'Lora', serif;
-    font-weight: 600;
-    font-size: 17px;
-    color: #2c1e3d;
-    background: linear-gradient(135deg, #f3c98b, #e8a96e);
-    padding: 16px 38px;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 10px 30px rgba(243, 201, 139, 0.35);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--muted);
+    text-align: center;
+    margin: 0;
   }
-  .cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 36px rgba(243, 201, 139, 0.5);
+  .sketch-frame--inline {
+    margin: 40px auto 12px;
   }
-  .cta-sub {
-    font-family: 'Lora', serif;
-    font-size: 12px;
-    color: rgba(255,255,255,0.7);
-    margin-top: 14px;
+  .sketch-caption--inline {
+    margin-bottom: 28px;
   }
 
   /* ---------- MAIN CONTENT ---------- */
   main {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 60px 20px;
+    padding: 8px 56px 64px;
   }
-  p { font-size: 18px; margin: 0 0 22px; }
-  h2 { font-size: 28px; font-weight: 700; margin: 46px 0 20px; color: #2c1e3d; }
+  p { font-size: 18.5px; line-height: 1.85; margin: 0 0 24px; }
+  h2 { font-size: 30px; font-weight: 700; margin: 52px 0 20px; color: #2c1e3d; line-height: 1.3; }
+
+  /* narrow reading column for the narrative, while the page itself stays wide */
+  main p, main h2, main .pullquote {
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* drop cap on the opening line, for a personal-journal feel */
+  main > p:first-of-type::first-letter {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--accent-dark);
+    float: left;
+    line-height: 0.85;
+    margin: 8px 10px 0 0;
+  }
+
+  /* warm emphasis + soft highlighter marks for key moments */
+  em { color: var(--accent-dark); font-style: italic; }
+  mark {
+    background: linear-gradient(180deg, transparent 58%, rgba(216, 168, 90, 0.4) 58%);
+    color: inherit;
+    padding: 0 1px;
+  }
 
   .pullquote {
     font-style: italic;
-    font-size: 21px;
+    font-size: 23px;
+    line-height: 1.6;
     color: var(--accent-dark);
-    background: var(--card);
+    background: var(--tint);
     border-left: 4px solid var(--gold);
     border-radius: 0 12px 12px 0;
-    padding: 24px 26px;
-    margin: 36px 0;
-    box-shadow: 0 6px 20px rgba(179, 103, 158, 0.08);
+    padding: 28px 32px;
+    margin: 40px auto;
   }
 
   /* ---------- HOW IT WORKS ---------- */
@@ -200,12 +212,11 @@
     margin: 30px 0 10px;
   }
   .step-card {
-    background: var(--card);
+    background: var(--tint);
     border-radius: 14px;
     padding: 30px 22px;
     text-align: center;
     border: 1px solid var(--border);
-    box-shadow: 0 8px 24px rgba(179, 103, 158, 0.1);
   }
   .step-num {
     width: 44px;
@@ -220,7 +231,7 @@
     font-weight: 700;
     font-size: 18px;
     margin: 0 auto 16px;
-    box-shadow: 0 4px 14px rgba(179, 103, 158, 0.35);
+    box-shadow: 0 4px 14px rgba(179, 103, 158, 0.32);
   }
   .step-card h3 {
     font-size: 19px;
@@ -229,8 +240,8 @@
     margin: 0 0 10px;
   }
   .step-card p {
-    font-size: 15.5px;
-    line-height: 1.6;
+    font-size: 16.5px;
+    line-height: 1.65;
     color: var(--text);
     margin: 0;
   }
@@ -243,16 +254,15 @@
     margin: 30px 0;
   }
   .t-card {
-    background: var(--card);
+    background: var(--tint);
     border-radius: 14px;
     padding: 24px;
     border: 1px solid var(--border);
-    box-shadow: 0 8px 24px rgba(179, 103, 158, 0.1);
   }
   .t-stars { color: var(--gold); font-size: 18px; margin-bottom: 12px; letter-spacing: 2px; }
   .t-quote {
     font-size: 17px;
-    line-height: 1.55;
+    line-height: 1.6;
     font-style: italic;
     font-weight: 500;
     margin-bottom: 18px;
@@ -260,44 +270,121 @@
   }
   .t-person { display: flex; align-items: center; gap: 14px; }
   .t-avatar {
-    width: 64px; height: 64px; border-radius: 50%;
+    width: 60px; height: 60px; border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
     border: 3px solid #fff;
-    box-shadow: 0 3px 12px rgba(179, 103, 158, 0.25);
+    box-shadow: 0 3px 12px rgba(179, 103, 158, 0.22);
   }
   .t-name {
     font-family: 'Lora', serif;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 14px;
     color: var(--accent-dark);
   }
 
-  /* ---------- FINAL CTA ---------- */
-  .final-cta {
-    background: var(--gradient);
-    color: #fff;
-    text-align: center;
-    padding: 60px 20px;
+  /* ---------- EMAIL OPT-IN ---------- */
+  .opt-in {
+    background: var(--tint);
+    border: 1px solid var(--border);
     border-radius: 20px;
-    margin: 50px 0;
+    padding: 44px 36px;
+    text-align: center;
+    margin: 48px 0;
   }
-  .final-cta h2 {
+  .opt-in h2 {
+    margin: 0 0 12px;
+    font-size: 26px;
+    color: #2c1e3d;
+  }
+  .opt-in p {
+    max-width: 460px;
+    margin: 0 auto 26px;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text);
+  }
+  .opt-in-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .opt-in-form input[type="email"] {
+    flex: 1 1 220px;
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    padding: 14px 20px;
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    outline: none;
+    background: #fff;
+    color: var(--text);
+  }
+  .opt-in-form input[type="email"]:focus {
+    border-color: var(--accent);
+  }
+  .opt-in-form button {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fdf6f1;
+    background: var(--accent-dark);
+    padding: 14px 32px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 22px rgba(138, 75, 120, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+  }
+  .opt-in-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(138, 75, 120, 0.4);
+  }
+  .opt-in .fine-print {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 16px 0 0;
+    max-width: none;
+  }
+
+  /* ---------- SECONDARY PATH ---------- */
+  .secondary-path {
+    text-align: center;
+    margin: 44px 0;
+    padding: 30px 20px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .secondary-path p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0 0 16px;
+  }
+  .secondary-cta {
+    display: inline-block;
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--accent-dark);
+    border: 2px solid var(--accent);
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  .secondary-cta:hover {
+    background: var(--accent);
     color: #fff;
-    margin-top: 0;
-    font-size: 28px;
-  }
-  .final-cta p {
-    color: rgba(255,255,255,0.85);
-    max-width: 480px;
-    margin: 0 auto 28px;
   }
 
   /* ---------- FOOTER ---------- */
   footer {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 20px 20px 100px;
+    padding: 32px 56px 48px;
     font-family: 'Lora', serif;
     font-size: 12px;
     color: var(--muted);
@@ -309,9 +396,8 @@
   .sticky-cta {
     position: fixed;
     bottom: 0; left: 0; right: 0;
-    background: rgba(44, 30, 61, 0.96);
-    backdrop-filter: blur(6px);
-    padding: 12px 16px;
+    background: var(--accent-dark);
+    padding: 14px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -319,13 +405,13 @@
     z-index: 50;
   }
   .sticky-cta span {
-    color: #fff;
+    color: #fdf6f1;
     font-family: 'Lora', serif;
     font-size: 13px;
   }
   .sticky-cta a {
-    background: linear-gradient(135deg, #f3c98b, #e8a96e);
-    color: #2c1e3d;
+    background: #fdf6f1;
+    color: var(--accent-dark);
     font-family: 'Lora', serif;
     font-weight: 600;
     font-size: 14px;
@@ -338,170 +424,251 @@
     .sticky-cta { display: none; }
   }
   @media (max-width: 720px) {
-    main { padding-bottom: 100px; }
+    body { padding: 0; }
+    .page { border-radius: 0; box-shadow: none; }
+    .topbar { padding: 32px 24px 24px; }
+    .hero { padding: 40px 24px 36px; }
+    .hero h1 { font-size: 30px; }
+    main { padding: 8px 24px 90px; }
+    footer { padding: 28px 24px 40px; }
   }
 </style>
 </head>
 <body>
 
-<div class="topbar">
-  <!-- Replace with your AI avatar image -->
-  <img src="avatar.jpg" alt="Sage Spencer">
-  <div>
-    <p class="brand-name">Sage Spencer</p>
-    <p class="brand-tag">Notes on love, mindset & modern curiosities</p>
-    <p class="brand-cred"><span class="dot"></span>Writer · 50K+ readers · Updated June 2026</p>
+<div class="page">
+
+  <div class="topbar">
+    <!-- Replace with your AI avatar image -->
+    <img src="avatar.jpg" alt="Sage Spencer">
+    <div>
+      <p class="brand-name">Sage Spencer</p>
+      <p class="brand-tag">Notes on love, mindset & modern curiosities</p>
+      <p class="brand-cred"><span class="dot"></span>Writer · 50K+ readers · Updated June 2026</p>
+    </div>
   </div>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <p class="hero-eyebrow">A Personal Story</p>
+    <h1>What if you could see your soulmate's face — before you ever met them?</h1>
+    <p class="sub">
+      Grab a coffee. This one's personal — here's what happened after I tried it myself.
+    </p>
+
+    <div class="sketch-frame">
+      <img src="sketch-preview.jpg" alt="The sketch Sage received">
+    </div>
+    <p class="sketch-caption">The sketch that arrived a couple of days later.</p>
+  </section>
+
+  <!-- ================= ARTICLE ================= -->
+  <main>
+    <p>
+      Grab a coffee. Sit down for a second — this one's a little different from what I normally
+      post, and I've gone back and forth on whether to even share it. But a few people have
+      asked, so here it is.
+    </p>
+
+    <p>
+      A while back, a friend sent me a link to this "soulmate sketch" thing — half as a joke,
+      half not. I'd seen people posting their drawings online for weeks and rolling my eyes at
+      most of them. But that night I was sitting up later than I should've been, scrolling with
+      the lights off, and for whatever reason — curiosity, boredom, a glass of wine — I filled
+      out the questionnaire. It took maybe ten minutes. Some of the questions were the kind you
+      don't usually say out loud, even to yourself — what you're actually looking for, what
+      you're scared of, what you've stopped letting yourself hope for.
+    </p>
+
+    <p>A couple of days later, the sketch came through.</p>
+
+    <div class="sketch-frame sketch-frame--inline">
+      <img src="sketch-preview.jpg" alt="The sketch Sage received">
+    </div>
+    <p class="sketch-caption sketch-caption--inline">The sketch that arrived a couple of days later.</p>
+
+    <p>
+      I want to be honest — it wasn't some lightning-bolt, gasp-out-loud moment. It was quieter
+      than that. A pencil drawing of a guy, maybe late twenties, dark hair a little overgrown
+      like he hadn't gotten around to a haircut. But there was this one thing — he wasn't
+      looking straight at the "camera." He was looking just off to the side, like something had
+      caught his attention a second before, half a smile on his face, like he was about to
+      laugh at something. It felt less like a portrait and more like someone had been caught
+      mid-thought. I remember thinking, <em>that's such a weirdly specific way to draw a
+      stranger.</em>
+    </p>
+
+    <p>I saved it, half-believing, half not, and went on with my life. Honestly, I mostly forgot about it.</p>
+
+    <h2>Six weeks later</h2>
+    <p>
+      I was at a friend's birthday thing — the kind of low-key gathering where you end up
+      talking to whoever's standing near the snacks. And there was this guy, leaning against
+      the counter, half-laughing at something someone said, looking off toward the door like he
+      was waiting for someone else to walk in.
+    </p>
+
+    <p class="pullquote">
+      The half-smile. The way he was looking just off to the side. I actually had to take a
+      second and just... breathe.
+    </p>
+
+    <p>
+      I'm not going to pretend I didn't notice. I felt it before I could even think about it —
+      <mark>that small, strange jolt, like déjà vu but sharper</mark>.
+    </p>
+
+    <h2>The part I keep coming back to</h2>
+    <p>
+      I didn't say anything about the sketch. Not that night, not since. Because the second I
+      felt that jolt, a more honest question showed up right behind it: <em>am I noticing this
+      because it's actually him — or because I've spent six weeks with that drawing sitting in
+      the back of my mind, ready to match it to literally anyone who tilted their head a certain
+      way?</em>
+    </p>
+
+    <p>I don't know the answer. And I've decided I'm okay not knowing it yet.</p>
+
+    <p>
+      Because a face — drawn or real — isn't actually the thing I'm looking for. What I'm
+      looking for is <mark>someone who's kind when no one's watching</mark>. Someone whose
+      values line up with mine when it actually counts, not just on a good day. Someone who,
+      when I'm not in the room, is still thinking about the conversation we had — the same way
+      I find myself thinking about his.
+    </p>
+
+    <p>
+      So that's where I am. We've talked a few times since. Nothing dramatic, nothing official.
+      I'm not in a hurry to decide what this is, and honestly, I think that's the healthiest
+      thing about it. The sketch didn't hand me an answer. If anything, it just made me <em>pay
+      attention</em> — to a moment I might have otherwise let pass by without a second look.
+    </p>
+
+    <p>
+      I don't know how this one ends. Maybe it's nothing. <mark>Maybe it's something.</mark>
+      I'll probably write about it again either way, because at this point you're all kind of
+      invested too, aren't you?
+    </p>
+
+    <!-- ================= EMAIL OPT-IN ================= -->
+    <div class="opt-in" id="updates">
+      <h2>Want to know how this turns out?</h2>
+      <p>
+        I honestly don't know yet either. If you'd like to hear what happens next — and a few
+        other things I've been noticing since — drop your email below. I'll keep it casual, no
+        spam, just updates as they happen.
+      </p>
+      <!--
+        Brevo form: replace the action URL below with your own Brevo form's
+        action URL (Brevo → Contacts → Forms → create a form → "Share" tab →
+        copy the <form> action URL). Add/remove hidden fields to match the
+        exact fields your Brevo form expects.
+      -->
+      <form action="https://YOUR-BREVO-ACCOUNT.sibforms.com/serve/REPLACE_WITH_YOUR_FORM_ID" method="POST" class="opt-in-form" target="_blank">
+        <input type="email" name="EMAIL" placeholder="Your email address" required>
+        <input type="hidden" name="locale" value="en">
+        <button type="submit">Join the Family</button>
+      </form>
+      <p class="fine-print">No spam, ever. Unsubscribe anytime.</p>
+    </div>
+
+    <!-- ================= SECONDARY PATH ================= -->
+    <div class="secondary-path">
+      <p>
+        If you don't want to wait for the next update — and you're curious what your own sketch
+        might show you — here's where I started:
+      </p>
+      <a href="https://59389c2f6u8y3m9lwhehx02l13.hop.clickbank.net/" class="secondary-cta" target="_blank" rel="nofollow noopener">
+        Get My Own Sketch →
+      </a>
+    </div>
+
+    <h2>If you decide to try it</h2>
+    <p>
+      For anyone wondering what that actually looks like, here's the short version of how it
+      went for me:
+    </p>
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Answer a few questions</h3>
+        <p>A short, guided questionnaire about you and what you're looking for — takes a few minutes.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Your reading is created</h3>
+        <p>Your answers are used to create a personal sketch and reading, by hand.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Your sketch is delivered</h3>
+        <p>Sent digitally — no waiting weeks, no in-person visit required.</p>
+      </div>
+    </div>
+
+    <h2>A few others who've gotten theirs</h2>
+    <p>I'm not the only one who's felt something they weren't expecting. A few readers wrote back after getting their own:</p>
+    <div class="testimonials">
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"I went in rolling my eyes and came out a little spooked, honestly."</p>
+        <div class="t-person">
+          <img class="t-avatar" src="avatar-j.jpg" alt="J.">
+          <div class="t-name">J. — verified reader</div>
+        </div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★★</div>
+        <p class="t-quote">"Took five minutes and gave me a lot to think about on the drive home."</p>
+        <div class="t-person">
+          <img class="t-avatar" src="avatar-m.jpg" alt="M.">
+          <div class="t-name">M. — verified reader</div>
+        </div>
+      </div>
+      <div class="t-card">
+        <div class="t-stars">★★★★☆</div>
+        <p class="t-quote">"Sent it to my sister and now she wants one too."</p>
+        <div class="t-person">
+          <img class="t-avatar" src="avatar-r.jpg" alt="R.">
+          <div class="t-name">R. — verified reader</div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Here's what I keep thinking about: I'd been carrying around that drawing for six weeks
+      without realizing it was quietly changing how I was looking at the world — who I noticed,
+      who I gave a second glance to, what I was actually hoping for when I walked into a room.
+    </p>
+
+    <p>
+      If you're curious what yours might show you — or more honestly, what it might make
+      <em>you</em> start noticing — that's the part I'd actually encourage you to find out for
+      yourself.
+    </p>
+  </main>
+
+  <footer>
+    <p>
+      <strong>Disclosure:</strong> This page may contain affiliate links. If you make a purchase
+      through one of these links, I may earn a commission at no extra cost to you.
+    </p>
+    <p>
+      The content above is for entertainment and informational purposes only and is the personal
+      opinion of the author. It is not a guarantee of any outcome, romantic or otherwise.
+    </p>
+    <p>
+      If you join the email list, you'll receive occasional updates from Sage Spencer. No spam —
+      unsubscribe anytime.
+    </p>
+    <p>&copy; 2026 Sage Spencer. All rights reserved.</p>
+  </footer>
+
 </div>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <span class="sparkle" style="top:15%; left:8%;">✦</span>
-  <span class="sparkle" style="top:60%; left:85%; animation-delay: 1s;">✦</span>
-  <span class="sparkle" style="top:25%; left:80%; animation-delay: 1.6s;">✧</span>
-  <span class="sparkle" style="top:75%; left:12%; animation-delay: 0.6s;">✧</span>
-
-  <p class="hero-eyebrow">Trends Worth a Second Look</p>
-  <h1>What if you could see your soulmate's face — before you ever met them?</h1>
-  <p class="sub">
-    I went looking into the "soulmate sketch" trend everyone's been sharing. Here's what
-    I found, and what it felt like to actually try it.
-  </p>
-
-  <div class="sketch-frame">
-    <img src="sketch-preview.jpg" alt="Soulmate sketch preview">
-  </div>
-
-  <a href="https://59389c2f6u8y3m9lwhehx02l13.hop.clickbank.net/" class="cta-button" target="_blank" rel="nofollow noopener">
-    Reveal My Sketch
-  </a>
-  <p class="cta-sub">Takes a few minutes · Delivered digitally</p>
-</section>
-
-<!-- ================= ARTICLE ================= -->
-<main>
-  <p>
-    Over the past few weeks, I kept seeing the same thing pop up in my feed: people sharing
-    pencil sketches of a face they'd never met, captioned with things like "this is apparently
-    what my soulmate looks like." My first reaction was the same as yours probably is right now —
-    a raised eyebrow. But the more I dug into it, the more interesting the whole thing became,
-    so I figured it was worth writing up.
-  </p>
-
-  <h2>So what exactly is a "soulmate sketch"?</h2>
-  <p>
-    The idea is simple enough: an artist — in this case, a woman named Tina who's built a
-    following around this — takes some basic information about you (your energy, your
-    relationship history, what you're looking for) and produces a hand-drawn portrait of the
-    person she believes you're meant to meet. No photo, no video call. Just a short
-    questionnaire and, a little while later, a sketch lands in your inbox.
-  </p>
-  <p>
-    Whether you read that as "psychic ability" or "an artist with great pattern-recognition and
-    intuition," the appeal is the same: it's a glimpse — real or imagined — at someone who might
-    matter to you later.
-  </p>
-
-  <h2>Why it's spreading the way it is</h2>
-  <p>
-    I think it taps into something pretty universal. Most of us, at some point, wonder what's
-    next — who's out there, what they look like, whether we'll recognize them when we see them.
-    A sketch like this gives that question a face. Even people who go in feeling skeptical
-    (myself included, at first) tend to come away saying the same thing: "okay, that was
-    oddly specific."
-  </p>
-
-  <p class="pullquote">
-    "I wasn't expecting to feel anything about a drawing — but there was something about seeing
-    a face looking back at me that made the whole thing feel a lot more real."
-  </p>
-
-  <h2>How the process actually works</h2>
-  <div class="steps">
-    <div class="step-card">
-      <div class="step-num">1</div>
-      <h3>Answer a few questions</h3>
-      <p>A short, guided questionnaire about you and what you're looking for — takes a few minutes.</p>
-    </div>
-    <div class="step-card">
-      <div class="step-num">2</div>
-      <h3>Your reading is created</h3>
-      <p>Your answers are used to create a personal sketch and reading, by hand.</p>
-    </div>
-    <div class="step-card">
-      <div class="step-num">3</div>
-      <h3>Your sketch is delivered</h3>
-      <p>Sent digitally — no waiting weeks, no in-person visit required.</p>
-    </div>
-  </div>
-
-  <h2>What people are saying</h2>
-  <div class="testimonials">
-    <div class="t-card">
-      <div class="t-stars">★★★★★</div>
-      <p class="t-quote">"I went in rolling my eyes and came out a little spooked, honestly."</p>
-      <div class="t-person">
-        <img class="t-avatar" src="avatar-j.jpg" alt="J.">
-        <div class="t-name">J. — verified reader</div>
-      </div>
-    </div>
-    <div class="t-card">
-      <div class="t-stars">★★★★★</div>
-      <p class="t-quote">"Took five minutes and gave me a lot to think about on the drive home."</p>
-      <div class="t-person">
-        <img class="t-avatar" src="avatar-m.jpg" alt="M.">
-        <div class="t-name">M. — verified reader</div>
-      </div>
-    </div>
-    <div class="t-card">
-      <div class="t-stars">★★★★☆</div>
-      <p class="t-quote">"Sent it to my sister and now she wants one too."</p>
-      <div class="t-person">
-        <img class="t-avatar" src="avatar-r.jpg" alt="R.">
-        <div class="t-name">R. — verified reader</div>
-      </div>
-    </div>
-  </div>
-
-  <h2>My take</h2>
-  <p>
-    I'll be upfront: I can't tell you whether the sketch you get will "come true." That's not
-    something anyone can promise, and I'd treat the whole thing the way I'd treat a horoscope —
-    a fun, reflective exercise rather than a guarantee. But if you're someone who enjoys this
-    kind of thing, or you're just curious enough to see what comes back, I think it's worth the
-    few minutes it takes.
-  </p>
-
-  <div class="final-cta">
-    <h2>Curious what yours looks like?</h2>
-    <p>It only takes a few minutes, and your sketch is delivered straight to your inbox.</p>
-    <a href="https://59389c2f6u8y3m9lwhehx02l13.hop.clickbank.net/" class="cta-button" target="_blank" rel="nofollow noopener">
-      Reveal My Sketch
-    </a>
-    <p class="cta-sub">Takes a few minutes · Delivered digitally</p>
-  </div>
-
-  <p>
-    Whatever you believe about how this works, I'd love to hear what you think if you try it.
-    For now, that's all from me — back soon with the next thing that caught my eye.
-  </p>
-</main>
-
-<footer>
-  <p>
-    <strong>Disclosure:</strong> This page may contain affiliate links. If you make a purchase
-    through one of these links, I may earn a commission at no extra cost to you.
-  </p>
-  <p>
-    The content above is for entertainment and informational purposes only and is the personal
-    opinion of the author. It is not a guarantee of any outcome, romantic or otherwise.
-  </p>
-  <p>&copy; 2026 Sage Spencer. All rights reserved.</p>
-</footer>
-
 <div class="sticky-cta">
-  <span>Curious what yours looks like?</span>
-  <a href="https://59389c2f6u8y3m9lwhehx02l13.hop.clickbank.net/" target="_blank" rel="nofollow noopener">Reveal My Sketch</a>
+  <span>Curious what yours might show you?</span>
+  <a href="https://59389c2f6u8y3m9lwhehx02l13.hop.clickbank.net/" target="_blank" rel="nofollow noopener">Get My Sketch</a>
 </div>
 
 </body>
