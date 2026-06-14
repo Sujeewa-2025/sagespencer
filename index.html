@@ -427,6 +427,14 @@
     border-top: 1px solid var(--border);
   }
   footer p { font-size: 12px; margin: 14px 0 0; }
+  footer .footer-links { margin: 18px 0 0; font-size: 13px; }
+  footer .footer-links a {
+    color: var(--accent-dark);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer .footer-links a:hover { text-decoration: underline; }
+  footer .footer-links .sep { color: var(--muted); margin: 0 8px; }
 
   /* ---------- STICKY MOBILE CTA ---------- */
   .sticky-cta {
@@ -711,6 +719,12 @@
     <p>
       If you join the email list, you'll receive occasional updates from Sage Spencer. No spam —
       unsubscribe anytime.
+    </p>
+    <p class="footer-links">
+      <a href="index.html">Home</a><span class="sep">·</span>
+      <a href="about.html">About</a><span class="sep">·</span>
+      <a href="privacy.html">Privacy Policy</a><span class="sep">·</span>
+      <a href="terms.html">Terms &amp; Conditions</a>
     </p>
     <p>&copy; 2026 Sage Spencer. All rights reserved.</p>
   </footer>

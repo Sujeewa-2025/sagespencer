@@ -1,302 +1,296 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Terms &amp; Conditions — Sage Spencer</title>
-  <meta name="description" content="Terms and Conditions for SageSpencer.com" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms &amp; Conditions — Sage Spencer</title>
+<meta name="description" content="Terms and conditions for sagespencer.com — please read before using this site.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --page-bg-start: #f7ece1;
+    --page-bg-end: #f1ddd1;
+    --text: #3a2e35;
+    --muted: #8a7a85;
+    --accent: #b3679e;
+    --accent-dark: #8a4b78;
+    --gold: #d8a85a;
+    --card: #fdf8f3;
+    --tint: #faf1ea;
+    --border: #f0e2da;
+    --tint-border: #e8c9b2;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Lora', Georgia, serif;
+    background: linear-gradient(160deg, var(--page-bg-start) 0%, var(--page-bg-end) 100%);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 48px 24px;
+  }
+  h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--card);
+    border-radius: 28px;
+    box-shadow: 0 30px 80px rgba(70, 40, 55, 0.12), 0 6px 20px rgba(70, 40, 55, 0.06);
+    overflow: hidden;
+  }
 
-  <style>
-    :root{
-      --ink:#2b2a2a;
-      --ink-soft: rgba(43,42,42,.78);
+  /* ---------- SIMPLE TOPBAR ---------- */
+  .simple-topbar {
+    padding: 32px 56px;
+    border-bottom: 1px solid var(--border);
+  }
+  .simple-topbar a.brand-link {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #2c1e3d;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+  }
+  .simple-topbar a.brand-link:hover { color: var(--accent-dark); }
 
-      --gold-1:#f7d992;
-      --gold-2:#f2c457;
+  /* ---------- LEGAL CONTENT ---------- */
+  .legal {
+    padding: 48px 56px 64px;
+  }
+  .legal .eyebrow {
+    font-family: 'Lora', serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    color: #7a3f68;
+    margin: 0 0 14px;
+  }
+  .legal h1 {
+    font-size: 36px;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    color: #2c1e3d;
+  }
+  .legal .updated {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--muted);
+    margin: 0 0 36px;
+  }
+  .legal h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 40px 0 14px;
+    color: #2c1e3d;
+    line-height: 1.3;
+  }
+  .legal h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 24px 0 10px;
+    color: #2c1e3d;
+  }
+  .legal p, .legal li {
+    font-size: 16.5px;
+    line-height: 1.8;
+    margin: 0 0 16px;
+  }
+  .legal ul, .legal ol {
+    margin: 0 0 20px;
+    padding-left: 26px;
+  }
+  .legal li { margin-bottom: 8px; }
+  .legal a { color: var(--accent-dark); font-weight: 600; text-decoration: underline; }
+  .legal a:hover { color: var(--accent); }
+  .legal strong { color: #2c1e3d; }
 
-      --card-border: rgba(130, 92, 18, .22);
-      --card-shadow: 0 22px 60px rgba(29, 22, 6, .18);
-      --soft-shadow: 0 14px 34px rgba(29, 22, 6, .12);
+  .legal .callout {
+    background: var(--tint);
+    border: 1.5px solid var(--tint-border);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin: 28px 0;
+    font-size: 16px;
+  }
+  .legal .callout p:last-child { margin-bottom: 0; }
 
-      --radius-lg: 22px;
-      --max: 920px;
-    }
+  /* ---------- FOOTER ---------- */
+  footer {
+    padding: 32px 56px 48px;
+    font-family: 'Lora', serif;
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+  }
+  footer p { font-size: 12px; margin: 14px 0 0; }
+  footer .footer-links { margin: 18px 0 0; font-size: 13px; }
+  footer .footer-links a {
+    color: var(--accent-dark);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer .footer-links a:hover { text-decoration: underline; }
+  footer .footer-links .sep { color: var(--muted); margin: 0 8px; }
 
-    *{ box-sizing:border-box; }
-    html,body{ height:100%; }
-    body{
-      margin:0;
-      color: var(--ink);
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:
-        radial-gradient(1200px 900px at 20% 18%, rgba(255,255,255,.30), rgba(255,255,255,0) 55%),
-        radial-gradient(1200px 900px at 86% 20%, rgba(255,255,255,.22), rgba(255,255,255,0) 58%),
-        radial-gradient(1200px 900px at 50% 85%, rgba(255,255,255,.20), rgba(255,255,255,0) 58%),
-        linear-gradient(180deg, var(--gold-1), var(--gold-2) 55%, #edb44a 100%);
-      position: relative;
-      overflow-x: hidden;
-    }
-
-    body:before{
-      content:"";
-      position: fixed;
-      inset: 0;
-      pointer-events:none;
-      opacity: .60;
-      background:
-        radial-gradient(900px 520px at 18% 35%, rgba(255,255,255,.22), rgba(255,255,255,0) 62%),
-        radial-gradient(900px 520px at 85% 40%, rgba(255,255,255,.18), rgba(255,255,255,0) 65%),
-        repeating-linear-gradient(0deg, rgba(255,255,255,.05), rgba(255,255,255,.05) 1px, rgba(255,255,255,0) 3px, rgba(255,255,255,0) 6px);
-      mix-blend-mode: soft-light;
-      filter: blur(.2px);
-    }
-
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 26px 18px 60px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .topbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 12px;
-      margin: 6px 0 14px;
-    }
-
-    .brand{
-      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-      font-size: 30px;
-      font-weight: 600;
-      letter-spacing: .02em;
-      color: rgba(67,46,10,.92);
-      text-shadow: 0 1px 0 rgba(255,255,255,.35);
-    }
-
-    .nav a{
-      font-size: 13px;
-      color: rgba(43,42,42,.74);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(43,42,42,.25);
-      padding-bottom: 2px;
-      margin-left: 12px;
-    }
-    .nav a:hover{
-      color: rgba(43,42,42,.92);
-      border-bottom-color: rgba(43,42,42,.55);
-    }
-
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.58), rgba(255,255,255,.38));
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--card-shadow);
-      padding: 26px 22px 22px;
-      position: relative;
-      overflow: hidden;
-    }
-    .card:before{
-      content:"";
-      position:absolute;
-      inset:-80px -80px -140px -80px;
-      background:
-        radial-gradient(1100px 420px at 50% 34%, rgba(255,255,255,.40), rgba(255,255,255,0) 62%),
-        radial-gradient(1200px 520px at 50% 85%, rgba(130,92,18,.22), rgba(130,92,18,0) 62%),
-        linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,0));
-      opacity: .85;
-      pointer-events:none;
-    }
-    .content{ position: relative; z-index: 1; }
-
-    h1{
-      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-      font-weight: 700;
-      font-size: clamp(30px, 3.2vw, 44px);
-      letter-spacing: .01em;
-      margin: 0 0 8px;
-      text-align: center;
-      line-height: 1.1;
-      text-wrap: balance;
-      color: rgba(43,42,42,.92);
-    }
-    .meta{
-      text-align:center;
-      margin: 0 0 18px;
-      font-size: 12px;
-      color: rgba(43,42,42,.68);
-      font-style: italic;
-    }
-
-    .legal{
-      max-width: 78ch;
-      margin: 0 auto;
-      color: rgba(43,42,42,.78);
-      line-height: 1.75;
-      font-size: 14px;
-    }
-    .legal h2{
-      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-      font-weight: 700;
-      font-size: 22px;
-      margin: 18px 0 6px;
-      color: rgba(43,42,42,.90);
-    }
-    .legal h3{
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      font-weight: 800;
-      font-size: 13px;
-      letter-spacing: .02em;
-      margin: 14px 0 6px;
-      color: rgba(43,42,42,.86);
-    }
-    .legal ul{ margin: 8px 0 12px 18px; padding: 0; }
-    .legal li{ margin: 6px 0; }
-    .legal a{
-      color: rgba(43,42,42,.78);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(43,42,42,.28);
-      padding-bottom: 1px;
-    }
-    .legal a:hover{
-      color: rgba(43,42,42,.92);
-      border-bottom-color: rgba(43,42,42,.55);
-    }
-
-    .note{
-      background: rgba(255,255,255,.50);
-      border: 1px solid rgba(90,63,12,.14);
-      border-radius: 14px;
-      padding: 12px 12px;
-      box-shadow: var(--soft-shadow);
-      margin: 14px 0;
-    }
-
-    footer{
-      text-align:center;
-      padding-top: 16px;
-      font-size: 12px;
-      color: rgba(43,42,42,.62);
-    }
-    footer a{
-      color: rgba(43,42,42,.70);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(43,42,42,.25);
-      padding-bottom: 2px;
-    }
-    footer a:hover{
-      color: rgba(43,42,42,.92);
-      border-bottom-color: rgba(43,42,42,.55);
-    }
-
-    @media (max-width: 520px){
-      .card{ padding: 22px 16px 18px; }
-      .topbar{ flex-direction: column; align-items: center; }
-      .nav a{ margin: 0 10px; }
-    }
-  </style>
-
+  @media (max-width: 720px) {
+    body { padding: 0; }
+    .page { border-radius: 0; box-shadow: none; }
+    .simple-topbar { padding: 24px 24px; }
+    .legal { padding: 36px 24px 48px; }
+    .legal h1 { font-size: 28px; }
+    footer { padding: 28px 24px 40px; }
+  }
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="topbar">
-      <div class="brand">Sage Spencer</div>
-      <div class="nav">
-        <a href="index.html">Home</a>
-        <a href="privacy.html">Privacy</a>
-      </div>
-    </div>
 
-    <div class="card">
-      <div class="content">
-        <h1>Terms &amp; Conditions</h1>
-        <p class="meta">Last updated: <span id="updated"></span></p>
+<div class="page">
 
-        <div class="legal">
-          <div class="note">
-            <strong>Quick note:</strong> This is a simple set of terms to keep things clear and respectful.
-          </div>
+  <div class="simple-topbar">
+    <a class="brand-link" href="index.html">Sage Spencer</a>
+  </div>
 
-          <h2>1) About Sage Spencer</h2>
-          <p>
-            SageSpencer.com is operated by <strong>Sage Spencer</strong>.
-            You can contact us at <a href="mailto:hello@sagespencer.com">hello@sagespencer.com</a>.
-          </p>
+  <div class="legal">
+    <p class="eyebrow">Legal</p>
+    <h1>Terms &amp; Conditions</h1>
+    <p class="updated">Last updated: June 2026</p>
 
-          <h2>2) Educational content (not financial advice)</h2>
-          <p>
-            The content on this website and in the 21‑Day Email Journey is provided for <strong>educational and informational purposes</strong> only.
-            It is not financial, legal, or professional advice. You are responsible for your own decisions and outcomes.
-            If you need professional advice, consult a qualified professional.
-          </p>
+    <p>
+      Welcome to sagespencer.com. By accessing or using this website, you agree to be bound by
+      these Terms &amp; Conditions. If you do not agree with any part of these terms, please do
+      not use this site.
+    </p>
 
-          <h2>3) No guarantees</h2>
-          <p>
-            We aim to provide supportive, practical guidance, but we do not guarantee specific results.
-            Your outcomes depend on many factors including your actions, situation, and consistency.
-          </p>
+    <h2>1. About This Site</h2>
+    <p>
+      sagespencer.com is a personal blog written from the perspective of "Sage Spencer." The
+      content published here — including articles, stories, and personal reflections — is for
+      general informational and entertainment purposes only. It reflects the personal opinions
+      and experiences shared by the author and should not be interpreted as professional,
+      psychological, relationship, financial, or medical advice of any kind.
+    </p>
 
-          <h2>4) Email subscription</h2>
-          <p>
-            By subscribing, you agree to receive the emails you requested. You can unsubscribe at any time using the link in any email.
-            We use Brevo to manage and deliver emails.
-          </p>
+    <h2>2. Affiliate Disclosure</h2>
+    <p>
+      This site participates in affiliate marketing programs, including the ClickBank affiliate
+      network. This means that if you click on certain links on this site and make a purchase, we
+      may earn a commission at no additional cost to you. We only recommend products or services
+      we believe may be of interest to our readers, but we encourage you to do your own research
+      before making any purchase decision.
+    </p>
+    <p>
+      In accordance with the FTC's guidance on endorsements and testimonials, any affiliate
+      relationship will be clearly and conspicuously disclosed on pages containing affiliate
+      links.
+    </p>
 
-          <h2>5) Acceptable use</h2>
-          <p>You agree not to use this website in a way that:</p>
-          <ul>
-            <li>Breaks any laws or regulations</li>
-            <li>Attempts to hack, disrupt, or abuse the site or services</li>
-            <li>Copies or republishes content without permission</li>
-          </ul>
+    <h2>3. No Guarantees or Warranties</h2>
+    <p>
+      Any stories, testimonials, or descriptions of products and services on this site
+      (including any third-party offers we link to) are shared for illustrative and
+      entertainment purposes. We do not guarantee any specific outcome, result, or experience
+      from using any product or service referenced on this site. Individual results vary, and
+      nothing on this site should be understood as a promise of a particular result, romantic or
+      otherwise.
+    </p>
+    <p>
+      This site and its content are provided on an "as is" and "as available" basis, without
+      warranties of any kind, either express or implied, including but not limited to warranties
+      of accuracy, completeness, merchantability, or fitness for a particular purpose.
+    </p>
 
-          <h2>6) Intellectual property</h2>
-          <p>
-            Unless otherwise stated, all content on this site (text, structure, and branding) is owned by Sage Spencer and protected by applicable laws.
-            You may read and share links, but you may not reproduce or sell the content without permission.
-          </p>
+    <h2>4. Intellectual Property</h2>
+    <p>
+      Unless otherwise noted, all content on this site — including text, images, graphics, and
+      design — is the property of Sage Spencer or is used with permission/under license. You may
+      not reproduce, distribute, or create derivative works from this content without prior
+      written permission, except for personal, non-commercial use (such as sharing a link to a
+      page).
+    </p>
 
-          <h2>7) Limitation of liability</h2>
-          <p>
-            To the maximum extent permitted by law, Sage Spencer will not be liable for any loss or damage arising from your use of this website,
-            emails, or any related materials.
-          </p>
+    <h2>5. Third-Party Links and Offers</h2>
+    <p>
+      This site contains links to third-party websites and offers, including products promoted
+      through ClickBank. We do not control, endorse, or assume responsibility for the content,
+      privacy practices, products, or services of any third-party site. Your interactions with
+      any third-party site — including any purchase you make — are solely between you and that
+      third party, and are governed by that party's own terms and policies.
+    </p>
 
-          <h2>8) Changes to these terms</h2>
-          <p>
-            We may update these Terms from time to time. The “Last updated” date above reflects the latest version.
-          </p>
+    <h2>6. Email Communications</h2>
+    <p>
+      If you choose to subscribe to our email updates, you agree to receive periodic emails from
+      us. We use a double opt-in process and provide an unsubscribe link in every email. You may
+      withdraw your consent and unsubscribe at any time. See our
+      <a href="privacy.html">Privacy Policy</a> for more information on how we handle your data.
+    </p>
 
-          <h2>9) Contact</h2>
-          <p>
-            Questions? Email <a href="mailto:hello@sagespencer.com">hello@sagespencer.com</a>.
-          </p>
+    <h2>7. Limitation of Liability</h2>
+    <p>
+      To the fullest extent permitted by applicable law, Sage Spencer and the operators of this
+      site shall not be liable for any direct, indirect, incidental, consequential, or punitive
+      damages arising from your access to or use of this site, any content on it, or any
+      third-party product or service obtained through a link on this site. This includes, without
+      limitation, damages for loss of profits, data, or other intangible losses.
+    </p>
 
-          <div class="note">
-            <strong>Thank you:</strong> We appreciate you being here. Keep it respectful. Keep it steady.
-          </div>
-        </div>
+    <h2>8. Your Responsibilities</h2>
+    <p>By using this site, you agree that you:</p>
+    <ul>
+      <li>Are at least 18 years old, or are accessing the site with the consent of a parent or
+        guardian;</li>
+      <li>Will use this site only for lawful purposes and in a manner that does not infringe the
+        rights of, or restrict or inhibit the use of, this site by any third party;</li>
+      <li>Understand that any decisions you make based on content on this site — including
+        purchasing a third-party product — are made at your own discretion and risk.</li>
+    </ul>
 
-        <footer>
-          © <span id="year"></span> SageSpencer.com ·
-          <a href="index.html">Home</a> ·
-          <a href="privacy.html">Privacy Policy</a>
-        </footer>
-      </div>
+    <h2>9. Changes to These Terms</h2>
+    <p>
+      We may update these Terms &amp; Conditions from time to time. Any changes will be posted on
+      this page with an updated "Last updated" date. Your continued use of this site after any
+      changes constitutes your acceptance of the revised terms.
+    </p>
+
+    <h2>10. Governing Law</h2>
+    <p>
+      These Terms &amp; Conditions are governed by and construed in accordance with the laws
+      applicable to the operator of this site, without regard to conflict of law principles. If
+      any provision of these terms is found to be unenforceable, the remaining provisions will
+      continue in full force and effect.
+    </p>
+
+    <h2>11. Contact Us</h2>
+    <p>
+      If you have any questions about these Terms &amp; Conditions, please contact us at
+      <a href="mailto:hello@sagespencer.com">hello@sagespencer.com</a>.
+    </p>
+
+    <div class="callout">
+      <p>
+        Also see our <a href="privacy.html">Privacy Policy</a> for information about how we
+        collect and use your data.
+      </p>
     </div>
   </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const d = new Date();
-    document.getElementById('updated').textContent =
-      d.toLocaleDateString(undefined, {year:'numeric', month:'long', day:'numeric'});
-  </script>
+  <footer>
+    <p class="footer-links">
+      <a href="index.html">Home</a><span class="sep">·</span>
+      <a href="about.html">About</a><span class="sep">·</span>
+      <a href="privacy.html">Privacy Policy</a><span class="sep">·</span>
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </p>
+    <p>&copy; 2026 Sage Spencer. All rights reserved.</p>
+  </footer>
+
+</div>
+
 </body>
 </html>

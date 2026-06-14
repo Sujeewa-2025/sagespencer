@@ -1,317 +1,366 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy — Sage Spencer</title>
-  <meta name="description" content="Privacy Policy for SageSpencer.com" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Sage Spencer</title>
+<meta name="description" content="Privacy policy for sagespencer.com — how Sage Spencer collects, uses, and protects your information.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --page-bg-start: #f7ece1;
+    --page-bg-end: #f1ddd1;
+    --text: #3a2e35;
+    --muted: #8a7a85;
+    --accent: #b3679e;
+    --accent-dark: #8a4b78;
+    --gold: #d8a85a;
+    --card: #fdf8f3;
+    --tint: #faf1ea;
+    --border: #f0e2da;
+    --tint-border: #e8c9b2;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: 'Lora', Georgia, serif;
+    background: linear-gradient(160deg, var(--page-bg-start) 0%, var(--page-bg-end) 100%);
+    color: var(--text);
+    line-height: 1.75;
+    padding: 48px 24px;
+  }
+  h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  .page {
+    max-width: 760px;
+    margin: 0 auto;
+    background: var(--card);
+    border-radius: 28px;
+    box-shadow: 0 30px 80px rgba(70, 40, 55, 0.12), 0 6px 20px rgba(70, 40, 55, 0.06);
+    overflow: hidden;
+  }
 
-  <style>
-    :root{
-      --ink:#2b2a2a;
-      --ink-soft: rgba(43,42,42,.78);
+  /* ---------- SIMPLE TOPBAR ---------- */
+  .simple-topbar {
+    padding: 32px 56px;
+    border-bottom: 1px solid var(--border);
+  }
+  .simple-topbar a.brand-link {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #2c1e3d;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+  }
+  .simple-topbar a.brand-link:hover { color: var(--accent-dark); }
 
-      --gold-1:#f7d992;
-      --gold-2:#f2c457;
+  /* ---------- LEGAL CONTENT ---------- */
+  .legal {
+    padding: 48px 56px 64px;
+  }
+  .legal .eyebrow {
+    font-family: 'Lora', serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    color: #7a3f68;
+    margin: 0 0 14px;
+  }
+  .legal h1 {
+    font-size: 36px;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    color: #2c1e3d;
+  }
+  .legal .updated {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--muted);
+    margin: 0 0 36px;
+  }
+  .legal h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 40px 0 14px;
+    color: #2c1e3d;
+    line-height: 1.3;
+  }
+  .legal h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 24px 0 10px;
+    color: #2c1e3d;
+  }
+  .legal p, .legal li {
+    font-size: 16.5px;
+    line-height: 1.8;
+    margin: 0 0 16px;
+  }
+  .legal ul, .legal ol {
+    margin: 0 0 20px;
+    padding-left: 26px;
+  }
+  .legal li { margin-bottom: 8px; }
+  .legal a { color: var(--accent-dark); font-weight: 600; text-decoration: underline; }
+  .legal a:hover { color: var(--accent); }
+  .legal strong { color: #2c1e3d; }
 
-      --card-border: rgba(130, 92, 18, .22);
-      --card-shadow: 0 22px 60px rgba(29, 22, 6, .18);
-      --soft-shadow: 0 14px 34px rgba(29, 22, 6, .12);
+  .legal .callout {
+    background: var(--tint);
+    border: 1.5px solid var(--tint-border);
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin: 28px 0;
+    font-size: 16px;
+  }
+  .legal .callout p:last-child { margin-bottom: 0; }
 
-      --radius-lg: 22px;
-      --max: 920px;
-    }
+  /* ---------- FOOTER ---------- */
+  footer {
+    padding: 32px 56px 48px;
+    font-family: 'Lora', serif;
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+  }
+  footer p { font-size: 12px; margin: 14px 0 0; }
+  footer .footer-links { margin: 18px 0 0; font-size: 13px; }
+  footer .footer-links a {
+    color: var(--accent-dark);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer .footer-links a:hover { text-decoration: underline; }
+  footer .footer-links .sep { color: var(--muted); margin: 0 8px; }
 
-    *{ box-sizing:border-box; }
-    html,body{ height:100%; }
-    body{
-      margin:0;
-      color: var(--ink);
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:
-        radial-gradient(1200px 900px at 20% 18%, rgba(255,255,255,.30), rgba(255,255,255,0) 55%),
-        radial-gradient(1200px 900px at 86% 20%, rgba(255,255,255,.22), rgba(255,255,255,0) 58%),
-        radial-gradient(1200px 900px at 50% 85%, rgba(255,255,255,.20), rgba(255,255,255,0) 58%),
-        linear-gradient(180deg, var(--gold-1), var(--gold-2) 55%, #edb44a 100%);
-      position: relative;
-      overflow-x: hidden;
-    }
-
-    body:before{
-      content:"";
-      position: fixed;
-      inset: 0;
-      pointer-events:none;
-      opacity: .60;
-      background:
-        radial-gradient(900px 520px at 18% 35%, rgba(255,255,255,.22), rgba(255,255,255,0) 62%),
-        radial-gradient(900px 520px at 85% 40%, rgba(255,255,255,.18), rgba(255,255,255,0) 65%),
-        repeating-linear-gradient(0deg, rgba(255,255,255,.05), rgba(255,255,255,.05) 1px, rgba(255,255,255,0) 3px, rgba(255,255,255,0) 6px);
-      mix-blend-mode: soft-light;
-      filter: blur(.2px);
-    }
-
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 26px 18px 60px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .topbar{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 12px;
-      margin: 6px 0 14px;
-    }
-
-    .brand{
-      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-      font-size: 30px;
-      font-weight: 600;
-      letter-spacing: .02em;
-      color: rgba(67,46,10,.92);
-      text-shadow: 0 1px 0 rgba(255,255,255,.35);
-    }
-
-    .nav a{
-      font-size: 13px;
-      color: rgba(43,42,42,.74);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(43,42,42,.25);
-      padding-bottom: 2px;
-      margin-left: 12px;
-    }
-    .nav a:hover{
-      color: rgba(43,42,42,.92);
-      border-bottom-color: rgba(43,42,42,.55);
-    }
-
-    .card{
-      background: linear-gradient(180deg, rgba(255,255,255,.58), rgba(255,255,255,.38));
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--card-shadow);
-      padding: 26px 22px 22px;
-      position: relative;
-      overflow: hidden;
-    }
-    .card:before{
-      content:"";
-      position:absolute;
-      inset:-80px -80px -140px -80px;
-      background:
-        radial-gradient(1100px 420px at 50% 34%, rgba(255,255,255,.40), rgba(255,255,255,0) 62%),
-        radial-gradient(1200px 520px at 50% 85%, rgba(130,92,18,.22), rgba(130,92,18,0) 62%),
-        linear-gradient(180deg, rgba(255,255,255,.14), rgba(255,255,255,0));
-      opacity: .85;
-      pointer-events:none;
-    }
-    .content{ position: relative; z-index: 1; }
-
-    h1{
-      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-      font-weight: 700;
-      font-size: clamp(30px, 3.2vw, 44px);
-      letter-spacing: .01em;
-      margin: 0 0 8px;
-      text-align: center;
-      line-height: 1.1;
-      text-wrap: balance;
-      color: rgba(43,42,42,.92);
-    }
-    .meta{
-      text-align:center;
-      margin: 0 0 18px;
-      font-size: 12px;
-      color: rgba(43,42,42,.68);
-      font-style: italic;
-    }
-
-    .legal{
-      max-width: 78ch;
-      margin: 0 auto;
-      color: rgba(43,42,42,.78);
-      line-height: 1.75;
-      font-size: 14px;
-    }
-    .legal h2{
-      font-family: "Cormorant Garamond", Georgia, "Times New Roman", serif;
-      font-weight: 700;
-      font-size: 22px;
-      margin: 18px 0 6px;
-      color: rgba(43,42,42,.90);
-    }
-    .legal h3{
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      font-weight: 800;
-      font-size: 13px;
-      letter-spacing: .02em;
-      margin: 14px 0 6px;
-      color: rgba(43,42,42,.86);
-    }
-    .legal ul{ margin: 8px 0 12px 18px; padding: 0; }
-    .legal li{ margin: 6px 0; }
-    .legal a{
-      color: rgba(43,42,42,.78);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(43,42,42,.28);
-      padding-bottom: 1px;
-    }
-    .legal a:hover{
-      color: rgba(43,42,42,.92);
-      border-bottom-color: rgba(43,42,42,.55);
-    }
-
-    .note{
-      background: rgba(255,255,255,.50);
-      border: 1px solid rgba(90,63,12,.14);
-      border-radius: 14px;
-      padding: 12px 12px;
-      box-shadow: var(--soft-shadow);
-      margin: 14px 0;
-    }
-
-    footer{
-      text-align:center;
-      padding-top: 16px;
-      font-size: 12px;
-      color: rgba(43,42,42,.62);
-    }
-    footer a{
-      color: rgba(43,42,42,.70);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(43,42,42,.25);
-      padding-bottom: 2px;
-    }
-    footer a:hover{
-      color: rgba(43,42,42,.92);
-      border-bottom-color: rgba(43,42,42,.55);
-    }
-
-    @media (max-width: 520px){
-      .card{ padding: 22px 16px 18px; }
-      .topbar{ flex-direction: column; align-items: center; }
-      .nav a{ margin: 0 10px; }
-    }
-  </style>
-
+  @media (max-width: 720px) {
+    body { padding: 0; }
+    .page { border-radius: 0; box-shadow: none; }
+    .simple-topbar { padding: 24px 24px; }
+    .legal { padding: 36px 24px 48px; }
+    .legal h1 { font-size: 28px; }
+    footer { padding: 28px 24px 40px; }
+  }
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="topbar">
-      <div class="brand">Sage Spencer</div>
-      <div class="nav">
-        <a href="index.html">Home</a>
-        <a href="terms.html">Terms</a>
-      </div>
-    </div>
 
-    <div class="card">
-      <div class="content">
-        <h1>Privacy Policy</h1>
-        <p class="meta">Last updated: <span id="updated"></span></p>
+<div class="page">
 
-        <div class="legal">
-          <div class="note">
-            <strong>Simple promise:</strong> We only collect what we need to send your emails. We don’t sell your data.
-          </div>
+  <div class="simple-topbar">
+    <a class="brand-link" href="index.html">Sage Spencer</a>
+  </div>
 
-          <h2>1) Who we are</h2>
-          <p>
-            This website is operated by <strong>Sage Spencer</strong> (“we”, “us”, “our”).
-            If you have questions about this Privacy Policy or your data, contact us at
-            <a href="mailto:hello@sagespencer.com">hello@sagespencer.com</a>.
-          </p>
+  <div class="legal">
+    <p class="eyebrow">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: June 2026</p>
 
-          <h2>2) What data we collect</h2>
-          <p>When you join the email list, we may collect:</p>
-          <ul>
-            <li><strong>Name</strong> (if you provide it)</li>
-            <li><strong>Email address</strong></li>
-            <li>Basic signup details (e.g., time of signup, which form you used)</li>
-          </ul>
+    <p>
+      This Privacy Policy explains how sagespencer.com ("this site," "we," "us," or "our")
+      collects, uses, and protects information when you visit this website, sign up for
+      updates, or click on links to third-party offers. By using this site, you agree to the
+      practices described in this policy.
+    </p>
 
-          <h2>3) Why we collect it</h2>
-          <p>We use your data to:</p>
-          <ul>
-            <li>Send the <strong>21‑Day Email Journey</strong> and related emails you requested</li>
-            <li>Manage subscriptions (unsubscribes, preferences)</li>
-            <li>Improve deliverability and prevent abuse/spam</li>
-          </ul>
+    <h2>1. Who We Are</h2>
+    <p>
+      This site is operated by Sage Spencer, an independent writer. If you have questions about
+      this policy or how your information is handled, you can reach out at
+      <a href="mailto:hello@sagespencer.com">hello@sagespencer.com</a>.
+    </p>
 
-          <h2>4) Legal basis (GDPR)</h2>
-          <p>
-            We process your information based on <strong>consent</strong> (you asked to receive emails).
-            You can withdraw your consent at any time by clicking the unsubscribe link in any email.
-          </p>
+    <h2>2. Information We Collect</h2>
+    <p>We collect the following types of information:</p>
+    <ul>
+      <li>
+        <strong>Information you provide directly:</strong> If you sign up for email updates, we
+        collect your email address through our email service provider (Brevo).
+      </li>
+      <li>
+        <strong>Automatically collected information:</strong> When you visit this site, certain
+        information may be collected automatically, including your IP address, browser type and
+        version, device type, operating system, referring page, pages visited, and the date and
+        time of your visit.
+      </li>
+      <li>
+        <strong>Cookies and similar technologies:</strong> We use cookies and similar tracking
+        technologies (described in Section 4 below) to support site functionality, measure
+        performance, and support advertising.
+      </li>
+      <li>
+        <strong>Affiliate click data:</strong> If you click a link to a third-party offer (for
+        example, a ClickBank vendor page), that click may be tracked for the purposes of
+        affiliate commission attribution. We do not receive or store any payment information from
+        these transactions.
+      </li>
+    </ul>
 
-          <h2>5) Email service provider (Brevo)</h2>
-          <p>
-            We use <strong>Brevo</strong> (Sendinblue SAS) to store subscriber details and send emails.
-            Brevo processes your data on our behalf to provide email delivery and list management.
-          </p>
+    <h2>3. How We Use Your Information</h2>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li>Send the email updates you've requested, and respond to messages you send us;</li>
+      <li>Operate, maintain, and improve this site and its content;</li>
+      <li>Understand how visitors find and use this site (analytics);</li>
+      <li>Measure and improve the performance of advertising campaigns that direct traffic to
+        this site;</li>
+      <li>Track referrals to third-party offers for affiliate commission purposes; and</li>
+      <li>Comply with legal obligations and enforce our Terms &amp; Conditions.</li>
+    </ul>
+    <p>
+      We do not sell your personal information to third parties for money.
+    </p>
 
-          <h2>6) How long we keep your data</h2>
-          <p>
-            We keep your subscriber data for as long as you remain subscribed.
-            If you unsubscribe, we will stop sending emails and may retain a minimal record to respect your unsubscribe request.
-          </p>
+    <h2>4. Cookies and Tracking Technologies</h2>
+    <p>
+      This site uses cookies, pixels, and similar technologies from the following types of
+      third-party services:
+    </p>
+    <ul>
+      <li>
+        <strong>Advertising platforms</strong> (such as Meta/Facebook, Google Ads, and TikTok) may
+        place pixels or tags on this site to measure ad performance and show you more relevant
+        ads on their platforms. These companies may use this information in accordance with their
+        own privacy policies.
+      </li>
+      <li>
+        <strong>Affiliate network tracking</strong> (ClickBank) uses cookies to attribute a sale
+        to this site if you click through to a vendor's offer and make a purchase. See
+        <a href="https://support.clickbank.com/en/articles/10535346-clickbank-privacy-policy" target="_blank" rel="noopener">ClickBank's Privacy Policy</a> for details on how ClickBank
+        processes this data.
+      </li>
+      <li>
+        <strong>Analytics providers</strong> may use cookies to help us understand site traffic
+        and usage patterns.
+      </li>
+    </ul>
+    <p>
+      Most web browsers allow you to control cookies through their settings. You can usually find
+      these settings in the "options" or "preferences" menu of your browser. Please note that
+      disabling cookies may affect the functionality of this and other websites.
+    </p>
 
-          <h2>7) Sharing and selling</h2>
-          <p>
-            We do not sell your personal data. We only share data with service providers we use to run the website and send emails (such as Brevo).
-          </p>
+    <h2>5. Email Communications</h2>
+    <p>
+      If you sign up for updates, your email address is stored and managed through our email
+      service provider, Brevo. We use a double opt-in process, meaning you'll receive a
+      confirmation email before you're added to our list. Every email we send includes an
+      unsubscribe link, and you may opt out of future communications at any time. We do not share
+      your email address with third parties for their own marketing purposes.
+    </p>
 
-          <h2>8) Your rights</h2>
-          <p>Depending on your location, you may have rights to:</p>
-          <ul>
-            <li>Access the personal data we hold about you</li>
-            <li>Correct inaccurate data</li>
-            <li>Request deletion</li>
-            <li>Withdraw consent</li>
-            <li>Object to processing in certain situations</li>
-          </ul>
-          <p>
-            To exercise these rights, email <a href="mailto:hello@sagespencer.com">hello@sagespencer.com</a>.
-          </p>
+    <h2>6. Third-Party Links and Affiliate Disclosure</h2>
+    <p>
+      This site contains links to third-party websites, including affiliate links to products
+      promoted through ClickBank. We may earn a commission if you make a purchase through these
+      links, at no additional cost to you. We are not responsible for the privacy practices,
+      content, or accuracy of third-party websites. We encourage you to review the privacy
+      policies of any third-party site you visit.
+    </p>
 
-          <h2>9) Cookies and analytics</h2>
-          <p>
-            This site may use minimal cookies required for basic functionality. If we add analytics or advertising in the future,
-            we’ll update this policy and (where required) request consent.
-          </p>
+    <h2>7. Your Rights Under GDPR (EU/UK Visitors)</h2>
+    <p>
+      If you are located in the European Economic Area or the United Kingdom, you have certain
+      rights under the General Data Protection Regulation (GDPR) and UK GDPR, including the right
+      to:
+    </p>
+    <ul>
+      <li>Access the personal data we hold about you;</li>
+      <li>Request correction of inaccurate or incomplete data;</li>
+      <li>Request deletion of your personal data ("right to be forgotten");</li>
+      <li>Restrict or object to certain processing of your data;</li>
+      <li>Request a copy of your data in a portable format; and</li>
+      <li>Withdraw consent at any time (for example, by unsubscribing from emails).</li>
+    </ul>
+    <p>
+      Where we rely on your consent to process your data (such as for email updates), the legal
+      basis for processing is your consent under Article 6(1)(a) GDPR. Where we use cookies for
+      advertising and analytics, the legal basis is consent or our legitimate interests in
+      operating and improving this site. To exercise any of these rights, contact us at
+      <a href="mailto:hello@sagespencer.com">hello@sagespencer.com</a>.
+    </p>
 
-          <h2>10) Updates to this policy</h2>
-          <p>
-            We may update this Privacy Policy from time to time. The “Last updated” date above reflects the latest version.
-          </p>
+    <h2>8. Your Rights Under CCPA/CPRA (California Visitors)</h2>
+    <p>
+      If you are a California resident, the California Consumer Privacy Act (CCPA), as amended by
+      the California Privacy Rights Act (CPRA), gives you the right to:
+    </p>
+    <ul>
+      <li>Know what personal information is collected, used, shared, or sold;</li>
+      <li>Delete personal information we have collected from you;</li>
+      <li>Opt out of the sale or sharing of your personal information;</li>
+      <li>Correct inaccurate personal information; and</li>
+      <li>Not be discriminated against for exercising any of these rights.</li>
+    </ul>
+    <p>
+      We do not sell personal information in exchange for money. However, our use of advertising
+      cookies and pixels (described in Section 4) may be considered "sharing" of personal
+      information under CPRA for cross-context behavioral advertising purposes. To opt out of this
+      sharing, you can adjust your cookie preferences in your browser or contact us at
+      <a href="mailto:hello@sagespencer.com">hello@sagespencer.com</a> with the subject line "Do Not
+      Sell or Share My Personal Information."
+    </p>
 
-          <div class="note">
-            <strong>Contact:</strong> <a href="mailto:hello@sagespencer.com">hello@sagespencer.com</a>
-          </div>
-        </div>
+    <h2>9. Data Retention</h2>
+    <p>
+      We retain your email address and related information for as long as you remain subscribed
+      to our updates, or until you request deletion. Automatically collected data (such as
+      analytics and cookie data) is generally retained for a limited period as determined by the
+      relevant third-party provider's own retention policies.
+    </p>
 
-        <footer>
-          © <span id="year"></span> SageSpencer.com ·
-          <a href="index.html">Home</a> ·
-          <a href="terms.html">Terms &amp; Conditions</a>
-        </footer>
-      </div>
+    <h2>10. Children's Privacy</h2>
+    <p>
+      This site is not directed at children under the age of 16, and we do not knowingly collect
+      personal information from children. If you believe a child has provided us with personal
+      information, please contact us so we can remove it.
+    </p>
+
+    <h2>11. International Data Transfers</h2>
+    <p>
+      The third-party services we use (including Brevo, ClickBank, and advertising platforms) may
+      process and store data in countries other than your own, including the United States. These
+      providers maintain their own safeguards for international data transfers in accordance with
+      applicable law.
+    </p>
+
+    <h2>12. Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy from time to time to reflect changes in our practices or
+      for legal, operational, or regulatory reasons. The "Last updated" date at the top of this
+      page reflects the most recent revision. We encourage you to review this page periodically.
+    </p>
+
+    <h2>13. Contact Us</h2>
+    <p>
+      If you have any questions about this Privacy Policy or how your information is handled,
+      please contact us at <a href="mailto:hello@sagespencer.com">hello@sagespencer.com</a>.
+    </p>
+
+    <div class="callout">
+      <p>
+        Also see our <a href="terms.html">Terms &amp; Conditions</a> for information about how
+        this site is used and our affiliate disclosure.
+      </p>
     </div>
   </div>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const d = new Date();
-    document.getElementById('updated').textContent =
-      d.toLocaleDateString(undefined, {year:'numeric', month:'long', day:'numeric'});
-  </script>
+  <footer>
+    <p class="footer-links">
+      <a href="index.html">Home</a><span class="sep">·</span>
+      <a href="about.html">About</a><span class="sep">·</span>
+      <a href="privacy.html">Privacy Policy</a><span class="sep">·</span>
+      <a href="terms.html">Terms &amp; Conditions</a>
+    </p>
+    <p>&copy; 2026 Sage Spencer. All rights reserved.</p>
+  </footer>
+
+</div>
+
 </body>
 </html>
