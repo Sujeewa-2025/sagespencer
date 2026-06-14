@@ -736,5 +736,23 @@
   <a href="https://59389c2f6u8y3m9lwhehx02l13.hop.clickbank.net/" target="_blank" rel="nofollow noopener">Get My Sketch</a>
 </div>
 
+<script>
+  // If this visit came from a Bemob-tracked campaign (e.g. MGID), the
+  // campaign URL appends a "clickid" parameter when redirecting here.
+  // When present, route the CTA buttons through Bemob's click URL so the
+  // landing-page -> offer step is recorded. If there's no clickid (direct
+  // or organic visits), the buttons keep their normal ClickBank hoplink.
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    var clickId = params.get('clickid');
+    if (!clickId) return;
+
+    var bemobLink = 'https://cfkxw.bemobtrk.com/click?clickid=' + encodeURIComponent(clickId);
+    document.querySelectorAll('.secondary-cta, .sticky-cta a').forEach(function (a) {
+      a.href = bemobLink;
+    });
+  })();
+</script>
+
 </body>
 </html>
