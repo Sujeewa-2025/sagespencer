@@ -52,22 +52,29 @@
     border-bottom: 1px solid var(--border);
   }
   .topbar img {
-    width: 96px;
-    height: 96px;
+    width: 136px;
+    height: 136px;
     border-radius: 50%;
     object-fit: cover;
     background: linear-gradient(135deg, #b3679e, #f3c98b);
-    border: 3px solid #ffffff;
-    box-shadow: 0 4px 16px rgba(179, 103, 158, 0.24);
+    border: 4px solid #ffffff;
+    box-shadow: 0 0 0 4px var(--tint-border), 0 10px 28px rgba(179, 103, 158, 0.28);
     flex-shrink: 0;
   }
   .topbar .brand-name {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 28px;
     margin: 0;
     color: #2c1e3d;
     letter-spacing: 0.3px;
+  }
+  .topbar .brand-intro {
+    font-family: 'Lora', serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--accent-dark);
+    margin: 6px 0 0;
   }
   .topbar .brand-tag {
     font-family: 'Lora', serif;
@@ -78,15 +85,15 @@
   .topbar .brand-cred {
     font-family: 'Lora', serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 13.5px;
     color: var(--accent-dark);
-    margin: 10px 0 0;
+    margin: 12px 0 0;
     display: flex;
     align-items: center;
     gap: 8px;
     background: var(--tint);
     border-radius: 50px;
-    padding: 6px 14px;
+    padding: 7px 16px;
     width: fit-content;
   }
   .topbar .brand-cred .dot {
@@ -451,7 +458,10 @@
   @media (max-width: 720px) {
     body { padding: 0; }
     .page { border-radius: 0; box-shadow: none; }
-    .topbar { padding: 32px 24px 24px; }
+    .topbar { padding: 32px 24px 24px; gap: 16px; }
+    .topbar img { width: 96px; height: 96px; }
+    .topbar .brand-name { font-size: 24px; }
+    .topbar .brand-intro { font-size: 15.5px; }
     .hero { padding: 40px 24px 36px; }
     .hero h1 { font-size: 30px; }
     main { padding: 8px 24px 90px; }
@@ -464,10 +474,11 @@
 <div class="page">
 
   <div class="topbar">
-    <!-- Replace with your AI avatar image -->
-    <img src="avatar.jpg" alt="Sage Spencer">
+    <!-- Author photo: face/shoulders crop, direct gaze -->
+    <img src="author.jpg" alt="Sage Spencer">
     <div>
       <p class="brand-name">Sage Spencer</p>
+      <p class="brand-intro">Hi — I'm Sage. Thanks for stopping by.</p>
       <p class="brand-tag">Notes on love, mindset & modern curiosities</p>
       <p class="brand-cred"><span class="dot"></span>Writer · 50K+ readers · Updated June 2026</p>
     </div>
