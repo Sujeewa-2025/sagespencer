@@ -709,6 +709,15 @@
       background: var(--purple-deep);
       box-shadow: 0 -10px 30px rgba(36,27,47,0.22);
       padding-bottom: env(safe-area-inset-bottom, 0px);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(100%);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    .sticky-cta.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
     }
     .sticky-inner {
       width: min(100% - 34px, var(--max));
@@ -858,7 +867,6 @@
           <p class="hero-sub">I didn't expect it to stay in my mind for six weeks.</p>
           <p class="hero-desc">A true story about the sketch I received, the person I noticed later, and what it made me realise about love.</p>
           <div class="hero-actions">
-            <a href="#story" class="btn-purple" style="align-self:flex-start;">Read What Happened ↓</a>
             <div class="trust-badges">
               <div class="trust-item">
                 <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -909,25 +917,17 @@
         <p>And sometimes curiosity is enough.</p>
       </div>
 
-      <!-- SPLIT SECTION: image left, text right -->
-      <div class="story-split">
-        <div class="story-split-img">
-          <img
-            src="author.jpg"
-            alt="The kind of night where curiosity wins"
-            loading="lazy">
-        </div>
-        <div class="story-split-text">
-          <h2>It started late at night</h2>
-          <p>A friend sent me the link.</p>
-          <p>I remember sitting on the couch, wrapped in a blanket, phone in one hand, wine glass nearby, lights low.</p>
-          <p>I had seen people posting their sketches online. Some looked sweet. Some looked dramatic. Some made me roll my eyes.</p>
-          <p>But for some reason, that night, I clicked.</p>
-          <p>Not because I was desperate. Not because I thought a drawing was going to solve my love life.</p>
-          <p>More because there was a small part of me that wondered:</p>
-          <div class="quote-box">
-            <p>What would mine show?</p>
-          </div>
+      <!-- It started late at night -->
+      <div class="story-section">
+        <h2>It started late at night</h2>
+        <p>A friend sent me the link.</p>
+        <p>I remember sitting on the couch, wrapped in a blanket, phone in one hand, wine glass nearby, lights low.</p>
+        <p>I had seen people posting their sketches online. Some looked sweet. Some looked dramatic. Some made me roll my eyes.</p>
+        <p>But for some reason, that night, I clicked.</p>
+        <p>Not because I was desperate. Not because I thought a drawing was going to solve my love life.</p>
+        <p>More because there was a small part of me that wondered:</p>
+        <div class="quote-box">
+          <p>What would mine show?</p>
         </div>
       </div>
 
@@ -1185,6 +1185,22 @@
       <a href="https://59389c2f6u8y3m9lwhehx02l13.hop.clickbank.net/" class="sticky-btn affiliate-link" rel="nofollow sponsored">Get My Own Sketch →</a>
     </div>
   </div>
+
+  <!-- ── Sticky bar: show after 50% scroll ── -->
+  <script>
+    (function () {
+      var sticky = document.querySelector('.sticky-cta');
+      var shown = false;
+      window.addEventListener('scroll', function () {
+        if (shown) return;
+        var scrolled = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+        if (scrolled >= 0.50) {
+          sticky.classList.add('visible');
+          shown = true;
+        }
+      }, { passive: true });
+    })();
+  </script>
 
   <!-- ── Bemob click tracking ── -->
   <script>
